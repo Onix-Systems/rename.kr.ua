@@ -1,0 +1,8 @@
+{
+    "require": {
+        "smarty/smarty": "~3.1",
+        "simplelight/framework": "@dev",
+        "catfan/Medoo": "0.9.8",
+        "twig/twig": "~1.0"
+    }
+}

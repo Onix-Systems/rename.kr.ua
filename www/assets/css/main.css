@@ -1,0 +1,31 @@
+html, body{
+	height: 100%;
+	min-height: 100%;
+	.container{
+		height: 100%;
+		position: relative;
+		padding-top: 30px;
+	}
+	.submit{
+		margin: 0 auto;
+		float: none;
+		display: block;
+	}
+	.message{
+		margin-bottom: 15px;
+		opacity: 1;
+		transition: 1s;
+		&.new{
+			opacity: 0;
+		}
+	}
+
+	.textarea-wrapper{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		right: 0;
+		margin-bottom: 0;
+	}
+	
+}

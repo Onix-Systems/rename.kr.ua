@@ -1,0 +1,8 @@
+#composer vendor folder
+/vendor
+
+#cofiguration
+/config
+
+#cahce folder
+/runtime
