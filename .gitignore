@@ -1,4 +1,8 @@
+#vendor
+/vendor
 
+#config
+/config
 
 #cahce folder
 /runtime
