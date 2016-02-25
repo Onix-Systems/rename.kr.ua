@@ -8,11 +8,18 @@ $(function() {
 
 
 	var k = {};
+
 	var htm = '';
+	
 	$.each($('.readyTable tbody .old_name'), function(index, val) {
-			if ($.isEmptyObject(k[$(this).text().substr(0,1).toUpperCase()])) 
-				k[$(this).text().substr(0,1).toUpperCase()] = [];
-			k[$(this).text().substr(0,1).toUpperCase()].push({ new_name:$(this).parent('.place-row').find('td.new_name'), old_name:$(this).parent('.place-row').find('td.old_name')});
+		var index = $(this).text().substr(0,1).toUpperCase();
+
+		if ($.isEmptyObject(k[index])) 
+				k[index] = [];
+
+		var parentNode = $(this).parent('.place-row');
+
+		k[index].push({ new_name: parentNode.find('td.new_name'), old_name: parentNode.find('td.old_name')});
 	});
 	$.each(k, function(index, val) {
 		 htm += '<tr style="background: #eaeaea;"><th scope="row" style="font-size: 20px;" class="delimeter" data-letter='+index+'>'+index+'</th><td></td><td></td></tr>';
@@ -23,11 +30,9 @@ $(function() {
 		 }
 	});
 
-
 	$('.readyTable').find('tbody').html(htm);
 
 	var currentHtml = htm;
-
 
 	$(document).on('click', '.alphebet', function(event) {
 		event.preventDefault();
