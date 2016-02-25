@@ -1,6 +1,6 @@
 <?php
 
-	define ( 'DOCUMENT_ROOT', __DIR__.'/../' );
+	define ( 'DOCUMENT_ROOT', __DIR__.'/' );
 
 	header ( 'Content-Type: text/html; charset=utf-8' );
 
@@ -10,9 +10,9 @@
 
 	session_start ();
 
-	require ( __DIR__ . '/../vendor/autoload.php' );
+	require ( __DIR__ . '/vendor/autoload.php' );
 
-	require ( __DIR__.'/../vendor/simplelight/framework/framework.php' );
+	require ( __DIR__.'/vendor/simplelight/framework/framework.php' );
 
 	new Sili;
 

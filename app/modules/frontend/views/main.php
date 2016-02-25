@@ -5,7 +5,11 @@
       </label> 
       <input type="text" class="form-control" name='placeInp' placeholder="Введите название"> 
    </div>
-
+   <style>
+      .table-striped>tbody>tr:nth-of-type(odd){
+         background: #fff;
+      }
+   </style>
    <a href="" class='alphebet'>А</a>
    <a href="" class='alphebet'>Б</a>
    <a href="" class='alphebet'>В</a>
