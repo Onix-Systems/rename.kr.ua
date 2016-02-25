@@ -70,24 +70,13 @@
       </thead>
       <tbody>
          <?php if ($data): ?>
-            <?php foreach ($data as $letterKey => $letterValue): ?>
-               <?php if ($letterValue): ?>
-                  <tr style='background: #eaeaea;' class='delimeter' data-letter='<?= $letterKey ?>'>
-                     <th scope="row" style='font-size: 20px;'><?= $letterKey ?></th>
-                     <td></td>
-                     <td></td>
-                  </tr>
-                  
-                  <?php foreach ($letterValue as $keyPlace => $valuePlace): ?>
-                     <tr class='place-row'>
-                        <th scope="row"></th>
-                        <td class='old_name'><?= $valuePlace['old_name'] ?></td>
-                        <td class='new_name'><?= $valuePlace['new_name'] ?></td>
-                     </tr>
-                  <?php endforeach ?>
-               <?php endif ?>
-               
-            <?php endforeach; ?>
+            <?php foreach ($data as $keyPlace => $valuePlace): ?>
+               <tr class='place-row'>
+                  <th scope="row"></th>
+                  <td class='old_name'><?= $valuePlace['old_name'] ?></td>
+                  <td class='new_name'><?= $valuePlace['new_name'] ?></td>
+               </tr>
+            <?php endforeach ?>
          <?php endif; ?>
       </tbody>
    </table>

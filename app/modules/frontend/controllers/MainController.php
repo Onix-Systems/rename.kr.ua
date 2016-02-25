@@ -16,13 +16,8 @@ class MainController extends IndexController
 			'old_name[!]' => ''
 
 		]);
-
-		$tmp = [];
-
-		foreach ($data as $key => $value) 
-			$tmp[mb_substr(str_replace(' ', '', $value['old_name']), 0, 1)] [] = $value;
 		
-		$this->render = ['main', ['data' => $tmp]];
+		$this->render = ['main', ['data' => $data]];
 	}
 
 }
