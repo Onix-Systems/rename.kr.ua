@@ -4,10 +4,10 @@ return [
 
 		'db' => [
 
-			'server' => '',
-			'username' => '',
-			'password' => '',
-			'database_name' => '',
+			'server' => 'localhost',
+			'username' => 'root',
+			'password' => '123456',
+			'database_name' => 'rename',
 			'database_type' => 'mysql',
 			'charset' => 'utf8'
 
