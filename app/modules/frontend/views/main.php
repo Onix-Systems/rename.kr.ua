@@ -7,7 +7,13 @@
    </div>
    <style>
       .table-striped>tbody>tr:nth-of-type(odd){
-         background: #fff;
+         background: #fff;    
+      }
+      .old_name{
+         width: 50%;
+      }
+      .new_name{
+         width: 50%;
       }
    </style>
    <a href="" class='alphebet'>А</a>
