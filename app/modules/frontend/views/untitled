@@ -1,0 +1,73 @@
+<a href="#" id="getContent">Загрузить контент</a> 
+<div id="divContent"></div> 
+
+<script type="text/javascript"> 
+	$(document).ready(function(){ 
+		$('#getContent').click(function(){ 
+		$.ajax({ 
+
+
+
+			cache: false, 
+			beforeSend: function() { 
+			$('#divContent').html('window.location.href'); 
+
+			}, 
+			success: function(html){ 
+				$("#divContent").html(html); 
+				$("#divContent").load("http://localhost/svet/catalog/lyustry #ono"); // как тут вместо адреса вставить ту конструкцию что ты мне скинул я че то никак не могу)))) 
+
+
+			} 
+			}); 
+			return false; 
+		}); 
+	}); 
+</script>
+
+<script>
+
+
+
+		$(function() {
+
+			var globalCounter = {$current_page_num};
+
+			$(document).on('click', '#getContent', function(event) {
+
+				event.preventDefault();
+
+				globalCounter++;
+
+				$.ajax({
+
+					url: 'svet/catalog/lyustry',
+
+					type: 'GET',
+
+					dataType: 'html',
+
+					data: {
+						page: globalCounter
+					},
+
+					success: function(res){
+						if (res) {
+							$('#divContent').html(html);
+						}else
+							alert('Не удалось загрузить');
+					},
+
+					error: function(){
+						alert('Не удалось загрузить');
+					}
+				});
+
+			});
+
+		});
+
+
+		
+
+</script>

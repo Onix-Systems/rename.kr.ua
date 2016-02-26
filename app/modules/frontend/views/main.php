@@ -65,7 +65,17 @@
                   <th scope="row"></th>
                   <td class='old_name'><?= $valuePlace['old_name'] ?></td>
                   <td class='new_name'><?= $valuePlace['new_name'] ?></td>
-                  <td class='about'><?php if($valuePlace['eponim']): ?><a href="<?= $valuePlace['eponim'] ?>" target='__blank'>Інформація</a><?php endif; ?></td>
+                  <td class='about'>
+                     <?php if($valuePlace['eponim']): ?>
+                        <?php 
+                           $res = false;
+                           foreach (['', 'Особа', 'Об’єкт', 'Історична назва', 'Суб’єкт'] as $key => $value) 
+                              if ($valuePlace['eponim_type'] == $key) 
+                                 $res = ($valuePlace['eponim'] && $valuePlace['eponim'] != 'історична назва') ? '<a href="'.$valuePlace['eponim'].'" target="__blank">'.$value.'</a>' : $value;
+                           echo $res;
+                         ?>
+                     <?php endif; ?>
+                  </td>
                </tr>
             <?php endforeach ?>
          <?php endif; ?>
