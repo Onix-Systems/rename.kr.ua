@@ -26,13 +26,13 @@
       <![endif]-->
    </head>
    <body>
-      <div style='    background: url(assets/images/rename-header.jpg) no-repeat center center;background-size: cover;width: 100%;height: 100%;position: fixed;z-index: -1;opacity: 0.1;top: 0;'></div>
+      <!-- <div style='    background: url(assets/images/rename-header.jpg) no-repeat center center;background-size: cover;width: 100%;height: 100%;position: fixed;z-index: -1;opacity: 0.1;top: 0;'></div> -->
       <div class="container" style='border-radius: 5px;padding-top: 20px;background: #fff;box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.33);'>
          <div class="header clearfix">
             <nav>
                <ul class="nav nav-pills pull-right">
-                  <li role="presentation" class="<?= $this->config->route['controllerId'] == 'MainController' ? 'active' : '' ?>"><a href="/">Главная</a></li>
-                  <li role="presentation" class='<?= $this->config->route['controllerId'] == 'AboutController' ? 'active' : '' ?>'><a href="/about">О проекте</a></li>
+                  <li role="presentation" class="<?= $this->config->route['controllerId'] == 'MainController' ? 'active' : '' ?>"><a href="/">Головна</a></li>
+                  <li role="presentation" class='<?= $this->config->route['controllerId'] == 'AboutController' ? 'active' : '' ?>'><a href="/about">Про проект</a></li>
                   <li role="presentation" class='<?= $this->config->route['controllerId'] == 'DocsController' ? 'active' : '' ?>'><a href="/docs">API</a></li>
                </ul>
             </nav>
@@ -41,7 +41,7 @@
          <!-- <img src="assets/images/rename-header.jpg" width='100%' style='margin-bottom: 20px; border-radius: 5px;' alt=""> -->
       	<?= $content ?>
          <footer class="footer">
-            <p>&copy; Onix-Systems 2015 </p>
+            <p>&copy; Onix-Systems 2016 </p>
          </footer>
       </div>
       <!-- /container -->

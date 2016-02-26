@@ -19,13 +19,13 @@ $(function() {
 
 		var parentNode = $(this).parent('.place-row');
 
-		k[index].push({ new_name: parentNode.find('td.new_name'), old_name: parentNode.find('td.old_name')});
+		k[index].push({ new_name: parentNode.find('td.new_name'), old_name: parentNode.find('td.old_name'), about: parentNode.find('td.about')});
 	});
 	$.each(k, function(index, val) {
-		 htm += '<tr style="background: #eaeaea;"><th scope="row" style="font-size: 20px;" class="delimeter" data-letter='+index+'>'+index+'</th><td></td><td></td></tr>';
+		 htm += '<tr style="background: #eaeaea;"><th scope="row" style="font-size: 20px;" class="delimeter" data-letter='+index+'>'+index+'</th><td></td><td></td><td></td></tr>';
 		 if (val.length) {
 		 	$.each(val, function(indexPlace, valPlace) {
-		 		htm += '<tr class="place-row" ><th scope="row"></th><td class="old_name">'+valPlace.old_name.text().replace(search, '<b>'+search+'</b>')+'</td><td class="new_name">'+valPlace.new_name.text().replace(search, '<b>'+search+'</b>')+'</td></tr>';
+		 		htm += '<tr class="place-row" ><th scope="row"></th><td class="old_name">'+valPlace.old_name.text()+'</td><td class="new_name">'+valPlace.new_name.text()+'</td><td class="about">'+valPlace.about.html()+'</td></tr>';
 		 	});
 		 }
 	});
@@ -44,7 +44,7 @@ $(function() {
 		}
 	});
 
-	$(document).on('change keyup', 'input[name="placeInp"]', function(event) {
+	$(document).on('keyup', 'input[name="placeInp"]', function(event) {
 		event.preventDefault();
 		if ( search == $(this).val() && !$(this).val())
 			search = false;
@@ -64,8 +64,10 @@ $(function() {
 
 					if ($.isEmptyObject(results[elText.substr(0,1)])) 
 						results[elText.substr(0,1)] = [];
-					
-					results[elText.substr(0,1)].push({ new_name:$(this).parent('.place-row').find('td.new_name'), old_name:$(this).parent('.place-row').find('td.old_name')});
+						
+					var parentNode = $(this).parent('.place-row');
+
+					results[elText.substr(0,1)].push({ new_name:parentNode.find('td.new_name'), old_name:parentNode.find('td.old_name'), about: parentNode.find('td.about')});
 
 				}
 
@@ -77,13 +79,13 @@ $(function() {
 
 				$.each(results, function(index, val) {
 
-					 html += '<tr style="background: #eaeaea;"><th scope="row" style="font-size: 20px;" class="delimeter" data-letter='+index+'>'+index+'</th><td></td><td></td></tr>';
+					 html += '<tr style="background: #eaeaea;"><th scope="row" style="font-size: 20px;" class="delimeter" data-letter='+index+'>'+index+'</th><td></td><td></td><td></td></tr>';
 
 					 if (val.length) {
 
 					 	$.each(val, function(indexPlace, valPlace) {
 
-					 		html += '<tr class="place-row" ><th scope="row"></th><td >'+valPlace.old_name.text().replace(search, '<b>'+search+'</b>')+'</td><td>'+valPlace.new_name.text().replace(search, '<b>'+search+'</b>')+'</td></tr>';
+					 		html += '<tr class="place-row" ><th scope="row"></th><td >'+valPlace.old_name.text().replace(search, '<b>'+search+'</b>')+'</td><td>'+valPlace.new_name.text().replace(search, '<b>'+search+'</b>')+'</td><td class="about">'+valPlace.about.html()+'</td></tr>';
 
 					 	});
 
@@ -91,9 +93,7 @@ $(function() {
 				});
 				
 				if (html) {
-
-					console.log(html)
-
+					$('tbody').click();
 					$('.readyTable').find('tbody').html(html);
 
 				}

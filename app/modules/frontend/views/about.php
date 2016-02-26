@@ -1,5 +1,10 @@
 <div class="bs-example" data-example-id="body-copy">
-   <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-   <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-   <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+  <p>
+	Ідея створення сайт з'явилася після того, як в мережі потрапив в поле зору сайт <a href="http://rename.dp.ua">http://rename.dp.ua</a>. Декомунізація об*єктів в Кіровограді йде не швидко і спостерігати за цими змінами, читаючи постанови виконавчого комітету міської ради дуже не зручно. 
+	В той же самий час і картографічні сервіси не встигають відслідковувати і правильно показувати назви вулиць, чи знаходити потрібні адреси.
+  </p>
+  <p>
+	В прозробці сайту приняли участь
+	<a href="https://www.facebook.com/durach?fref=ts" target='__blank'>Дмитро Дурач</a> - ідея, <a href="https://www.facebook.com/bohdan.stasiuk?fref=ts" target='__blank'>Богдаг Стасюк</a> - підготовка інформації про зміни назв, <a href="https://www.facebook.com/xainse?fref=ufi" target='__blank'>Холін Сергій</a> - організатор, <a href="https://www.facebook.com/profile.php?id=100000771316650" target='__blank'>Константин Алтухов</a> - розробник.
+  </p>
 </div>

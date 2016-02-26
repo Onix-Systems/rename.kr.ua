@@ -1,9 +1,9 @@
 <div class="bs-example" data-example-id="striped-table">
    <div class="form-group"> 
       <label for="exampleInputEmail1">
-         Поиск улици
+         Пошук вулиці
       </label> 
-      <input type="text" class="form-control" name='placeInp' placeholder="Введите название"> 
+      <input type="text" class="form-control" name='placeInp' placeholder="Введіть назву"> 
    </div>
    <a href="" class='alphebet'>А</a>
    <a href="" class='alphebet'>Б</a>
@@ -53,8 +53,9 @@
       <thead>
          <tr>
             <th>#</th>
-            <th>Старое название</th>
-            <th>Новое название</th>
+            <th>Стара назва</th>
+            <th>Нова назва</th>
+            <th>На честь</th>
          </tr>
       </thead>
       <tbody>
@@ -64,6 +65,7 @@
                   <th scope="row"></th>
                   <td class='old_name'><?= $valuePlace['old_name'] ?></td>
                   <td class='new_name'><?= $valuePlace['new_name'] ?></td>
+                  <td class='about'><?php if($valuePlace['eponim']): ?><a href="<?= $valuePlace['eponim'] ?>" target='__blank'>Інформація</a><?php endif; ?></td>
                </tr>
             <?php endforeach ?>
          <?php endif; ?>
