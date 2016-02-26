@@ -7,4 +7,7 @@
 	В прозробці сайту приняли участь
 	<a href="https://www.facebook.com/durach?fref=ts" target='__blank'>Дмитро Дурач</a> - ідея, <a href="https://www.facebook.com/bohdan.stasiuk?fref=ts" target='__blank'>Богдаг Стасюк</a> - підготовка інформації про зміни назв, <a href="https://www.facebook.com/xainse?fref=ufi" target='__blank'>Холін Сергій</a> - організатор, <a href="https://www.facebook.com/profile.php?id=100000771316650" target='__blank'>Константин Алтухов</a> - розробник.
   </p>
+  <b>
+  	Скарги та пропозиціх надсилайте на електронну пошту: <a mailto='sergey.kholin@onix-systems.com'>sergey.kholin@onix-systems.com</a>
+  </b>
 </div>
