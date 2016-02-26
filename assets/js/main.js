@@ -60,7 +60,7 @@ $(function() {
 
 				var elText = $(this).text();
 				
-				if (elText && elText.indexOf(search) >= 0) {
+				if (elText && elText.toLowerCase().indexOf(search.toLowerCase()) >= 0) {
 
 					if ($.isEmptyObject(results[elText.substr(0,1)])) 
 						results[elText.substr(0,1)] = [];
@@ -85,7 +85,7 @@ $(function() {
 
 					 	$.each(val, function(indexPlace, valPlace) {
 
-					 		html += '<tr class="place-row" ><th scope="row"></th><td >'+valPlace.old_name.text().replace(search, '<b>'+search+'</b>')+'</td><td>'+valPlace.new_name.text().replace(search, '<b>'+search+'</b>')+'</td><td class="about">'+valPlace.about.html()+'</td></tr>';
+					 		html += '<tr class="place-row" ><th scope="row"></th><td >'+valPlace.old_name.text().replace( new RegExp(search, 'i'), '<b>'+search+'</b>')+'</td><td>'+valPlace.new_name.text().replace( new RegExp(search, 'i'), '<b>'+search+'</b>')+'</td><td class="about">'+valPlace.about.html()+'</td></tr>';
 
 					 	});
 
