@@ -1,12 +1,25 @@
 .table-striped>tbody>tr:nth-of-type(odd){
  background: #fff;    
 }
+.table-striped>tbody>tr{
+ background: #fff;    
+}
+.keyword{
+    width: 100%;
+}
+.place_row{
+    width: 100%;
+}
 .old_name{
- width: 50%;
+ width: 45%;
 }
 .new_name{
- width: 50%;
+ width: 45%;
 }
+.about{
+    width: 10%;
+}
+
 tbody b{
      border-radius: 2px;
     background-color: #fde910;
@@ -42,3 +55,20 @@ tbody b{
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
+@media screen and (max-width: 600px) {
+    .alphebet{
+        font-size: 18px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 5px;
+        display: block;
+        float: left;
+        margin-left: 2px;
+        margin-bottom: 2px;
+        border-radius: 5px;
+    }
+}
+
+
+
+    

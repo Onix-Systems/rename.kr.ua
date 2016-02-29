@@ -48,6 +48,7 @@
    <a href="" class='alphebet'>8</a>
    <a href="" class='alphebet'>9</a>
    <a href="" class='alphebet'>0</a>
+   <div class='clearfix'></div>
    <h3>Райони</h3>
    <table class="table table-striped ">
       <thead>
