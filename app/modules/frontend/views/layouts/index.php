@@ -24,6 +24,16 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1245735-40', 'auto');
+        ga('send', 'pageview');
+
+      </script>
    </head>
    <body>
       <!-- <div style='    background: url(assets/images/rename-header.jpg) no-repeat center center;background-size: cover;width: 100%;height: 100%;position: fixed;z-index: -1;opacity: 0.1;top: 0;'></div> -->
