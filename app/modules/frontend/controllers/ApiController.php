@@ -8,36 +8,16 @@ class ApiController extends IndexController
 		if (isset($_GET['streets'])) {
 			header('Content-Type: application/json');
 			if (Sili::$db->insert('stats', ['info' => json_encode($_SERVER)])) {
-
-				$area = ['r' => [
-						'oldAreaName' => '',
-						'newAreaName' => '',
-						'objects' => []
-					]
-				];
-				foreach (Sili::$model->data->getData() as $key => $value) {
-					$area['r']['objects'][] = [
-
-						'type' => $value['object_type'],
-
-						'newType' => '',
-
-						'oldName' => $value['old_name'],
-
-						'newName' => $value['bew_name'],
-
-						'restored'=> true,
-
-						'link' => [
-
-							'href' => $value['eponim'],
-
-							'type' => $value['eponim_type']
-
-						]
-					];
+				$areas = false;
+				foreach (Sili::$db->select('areas' , '*') as $keyArea => $valueArea) {
+					$areas['r'.$valueArea['id']] = [
+												'oldAreaName' => $valueArea['old_name'],
+												'newAreaName' => $valueArea['new_name'],
+												'objects' => Sili::$model->data->getData(['area_id' => $valueArea['id']])
+											];
 				}
-				echo json_encode($area);
+
+				echo json_encode($areas);
 			}
 		}	
 		

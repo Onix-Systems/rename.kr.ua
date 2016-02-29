@@ -48,7 +48,28 @@
    <a href="" class='alphebet'>8</a>
    <a href="" class='alphebet'>9</a>
    <a href="" class='alphebet'>0</a>
-
+   <h3>Райони</h3>
+   <table class="table table-striped ">
+      <thead>
+         <tr>
+            <th>#</th>
+            <th>Стара назва</th>
+            <th>Нова назва</th>
+         </tr>
+      </thead>
+      <tbody>
+         <?php if ($areas): ?>
+            <?php foreach ($areas as $keyArea => $valueArea): ?>
+               <tr class='place-row'>
+                  <th scope="row"><?= $keyArea+1 ?></th>
+                  <td><?= $valueArea['old_name'] ?></td>
+                  <td><?= $valueArea['new_name'] ?></td>
+               </tr>
+            <?php endforeach ?>
+         <?php endif; ?>
+      </tbody>
+   </table>
+   <h3>Вулиці</h3>
    <table class="table table-striped readyTable">
       <thead>
          <tr>
