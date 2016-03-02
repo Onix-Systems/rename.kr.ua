@@ -5,7 +5,9 @@
   </p>
   <p>
 	В прозробці сайту приняли участь
-	<a href="https://www.facebook.com/bohdan.stasiuk" target='__blank'>Богдан Стасюк</a> - ідея, підготовка інформації про зміни назв, <a href="https://www.facebook.com/xainse" target='__blank'>Холін Сергій</a> - організатор, <a href="https://www.facebook.com/profile.php?id=100000771316650" target='__blank'>Константин Алтухов</a> - розробник, <a href="https://www.facebook.com/durach" target='__blank'>Дмитро Дурач</a> - моральна підтримка.
+	<a href="https://www.facebook.com/bohdan.stasiuk" target='__blank'>Богдан Стасюк</a> - ідея, підготовка інформації про зміни назв, 
+	<a href="https://www.facebook.com/profile.php?id=100009344186941" target='__blank'>Максим Сінченко</a> - підготовка інформації про вулиці, 
+	<a href="https://www.facebook.com/xainse" target='__blank'>Холін Сергій</a> - організатор, <a href="https://www.facebook.com/profile.php?id=100000771316650" target='__blank'>Константин Алтухов</a> - розробник, <a href="https://www.facebook.com/durach" target='__blank'>Дмитро Дурач</a> - моральна підтримка.
   </p>
   <p>
     <b>
