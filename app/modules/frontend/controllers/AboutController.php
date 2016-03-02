@@ -5,7 +5,7 @@ class AboutController extends IndexController
 
 	public function actionIndex()
 	{
-		$this->pageTitle = 'О проекте';
+		$this->pageTitle = 'Про проект';
 		
 		$this->render = ['about'];
 	}

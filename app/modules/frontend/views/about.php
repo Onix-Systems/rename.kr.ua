@@ -7,7 +7,15 @@
 	В прозробці сайту приняли участь
 	<a href="https://www.facebook.com/bohdan.stasiuk" target='__blank'>Богдан Стасюк</a> - ідея, підготовка інформації про зміни назв, <a href="https://www.facebook.com/xainse" target='__blank'>Холін Сергій</a> - організатор, <a href="https://www.facebook.com/profile.php?id=100000771316650" target='__blank'>Константин Алтухов</a> - розробник, <a href="https://www.facebook.com/durach" target='__blank'>Дмитро Дурач</a> - моральна підтримка.
   </p>
-  <b>
-  	Скарги та пропозиціх надсилайте на електронну пошту: <a mailto='sergey.kholin@onix-systems.com'>sergey.kholin@onix-systems.com</a>
-  </b>
+  <p>
+    <b>
+      Скарги та пропозиціх надсилайте на електронну пошту: <a mailto='sergey.kholin@onix-systems.com'>sergey.kholin@onix-systems.com</a>
+    </b>
+  </p>
+  
+  <p>
+    <b>
+      Ваші ідеї або якщо у вас виникли складності в роботі сервісу, обишіть будь ласка на данному <a href='https://onixsystems.freshdesk.com' target="__blank">ресурсі</a>
+    </b>
+  </p>
 </div>
