@@ -69,6 +69,21 @@ tbody b{
     }
 }
 
+.support{
+    position: fixed;
+    right: -50px;
+    width: 140px;
+    height: 40px;
+    background: url(../images/supp.png) no-repeat center center;
+    top: 82px;
+    background-size: contain;
+    color: transparent;
+    display: block;
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
 
 
     

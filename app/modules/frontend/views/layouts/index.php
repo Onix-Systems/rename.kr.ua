@@ -34,6 +34,7 @@
         ga('send', 'pageview');
 
       </script>
+      <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js "></script>
    </head>
    <body>
       <!-- <div style='    background: url(assets/images/rename-header.jpg) no-repeat center center;background-size: cover;width: 100%;height: 100%;position: fixed;z-index: -1;opacity: 0.1;top: 0;'></div> -->
@@ -56,6 +57,8 @@
       </div>
       <!-- /container -->
       <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <a href="#" onclick="FreshWidget.show(); return false;" class='support'></a>
+      <script type="text/javascript"> FreshWidget.init("", {"queryString": "&widgetType=popup&screenshot=no", "widgetType": "popup", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#006063", "backgroundImage": "", "alignment": "4", "offset": "-1500px", "formHeight": "500px", "url": "https://onixsystems.freshdesk.com"} ); </script>
       <script src="assets/libs/js/ie10-viewport-bug-workaround.js"></script>
       <script src="assets/js/main.js"></script>
    </body>

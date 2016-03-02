@@ -12,10 +12,4 @@
       Скарги та пропозиціх надсилайте на електронну пошту: <a mailto='sergey.kholin@onix-systems.com'>sergey.kholin@onix-systems.com</a>
     </b>
   </p>
-  
-  <p>
-    <b>
-      Ваші ідеї або якщо у вас виникли складності в роботі сервісу, обишіть будь ласка на данному <a href='https://onixsystems.freshdesk.com' target="__blank">ресурсі</a>
-    </b>
-  </p>
 </div>
