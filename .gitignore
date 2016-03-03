@@ -2,7 +2,7 @@
 /vendor
 
 #config
-/config
+/config/config.php
 
 #cahce folder
 /runtime
