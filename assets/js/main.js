@@ -84,8 +84,16 @@ $(function() {
 					 if (val.length) {
 
 					 	$.each(val, function(indexPlace, valPlace) {
+					 		var newName = valPlace.new_name.text(), oldName = valPlace.old_name.text();
 
-					 		html += '<tr class="place-row" ><th scope="row"></th><td >'+valPlace.old_name.text().replace( new RegExp(search, 'i'), '<b>'+search+'</b>')+'</td><td>'+valPlace.new_name.text().replace( new RegExp(search, 'i'), '<b>'+search+'</b>')+'</td><td class="about">'+valPlace.about.html()+'</td></tr>';
+					 		var startToIndexReplaceNew = newName.toLowerCase().indexOf(search.toLowerCase()), startToIndexReplaceOld = oldName.toLowerCase().indexOf(search.toLowerCase());
+
+					 		if (startToIndexReplaceNew >= 0)
+					 			newName = newName.replace( new RegExp(newName.substr(startToIndexReplaceNew, search.length), 'i'), '<b>'+newName.substr(startToIndexReplaceNew, search.length)+'</b>');
+					 		if (startToIndexReplaceOld >= 0)
+					 			oldName = oldName.replace( new RegExp( oldName.substr(startToIndexReplaceOld, search.length), 'i'), '<b>'+oldName.substr(startToIndexReplaceOld, search.length)+'</b>');
+					 		
+					 		html += '<tr class="place-row" ><th scope="row"></th><td >'+oldName+'</td><td>'+newName+'</td><td class="about">'+valPlace.about.html()+'</td></tr>';
 
 					 	});
 
