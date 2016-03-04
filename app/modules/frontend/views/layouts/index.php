@@ -8,17 +8,17 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <title><?= $pageTitle; ?></title>
-      <script src='assets/libs/js/jquery-2.2.0.min.js'></script>
+      <script src='/assets/libs/js/jquery-2.2.0.min.js'></script>
       <!-- Bootstrap core CSS -->
-      <link href="assets/libs/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/assets/libs/css/bootstrap.min.css" rel="stylesheet">
       <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <link href="assets/libs/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+      <link href="/assets/libs/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
       <!-- Custom styles for this template -->
-      <link href="assets/libs/css/jumbotron-narrow.css" rel="stylesheet">
-      <link href="assets/css/main.css" rel="stylesheet">
+      <link href="/assets/libs/css/jumbotron-narrow.css" rel="stylesheet">
+      <link href="/assets/css/main.css" rel="stylesheet">
       <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-      <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-      <script src="assets/libs/js/ie-emulation-modes-warning.js"></script>
+      <!--[if lt IE 9]><script src="../..//assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+      <script src="/assets/libs/js/ie-emulation-modes-warning.js"></script>
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -59,7 +59,7 @@
       <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
       <a href="#" onclick="FreshWidget.show(); return false;" class='support'></a>
       <script type="text/javascript"> FreshWidget.init("", {"queryString": "&widgetType=popup&screenshot=no", "widgetType": "popup", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#006063", "backgroundImage": "", "alignment": "4", "offset": "-1500px", "formHeight": "500px", "url": "https://onixsystems.freshdesk.com"} ); </script>
-      <script src="assets/libs/js/ie10-viewport-bug-workaround.js"></script>
-      <script src="assets/js/main.js"></script>
+      <script src="/assets/libs/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/assets/js/main.js"></script>
    </body>
 </html>
