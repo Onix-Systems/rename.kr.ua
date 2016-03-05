@@ -36,7 +36,9 @@ class PhpTemplateEngine implements TemplateEngineInterface
 
 				$content = $this->renderPartial($this->config->renderOptions->template, $this->config->renderOptions->vars);
 
-				$baseUrl = $_SERVER['SERVER_NAME'];
+				$baseUrl = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
+				$layoutVars = $this->config->renderOptions->layoutVars;
 
 				return require_once $this->config->viewsPath.'layouts/'.$this->config->renderOptions->layout.'.php';
 

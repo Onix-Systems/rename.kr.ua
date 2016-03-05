@@ -15,6 +15,11 @@
 			ga('create', 'UA-1245735-40', 'auto');
 			ga('send', 'pageview');
 		</script>
+		<meta property="og:title" content="<?= $pageTitle ?>" />
+		<meta property="og:type" content="article">
+		<meta property="og:site_name" content="Переіменування вулиць в місті Кіровоград в зв*язку з вимогою закону про декомунізацію" />
+		<meta property="og:url" content="<?= $baseUrl ?>" />
+		<?= $layoutVars['meta'] ?>	
 	</head>
 	<body>
 		
