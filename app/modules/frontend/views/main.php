@@ -61,7 +61,7 @@
                         <div class="row">
                            <div class="row-data"><a href="/street/view/id/<?= $valuePlace['id'] ?>"><?= $valuePlace['old_name'] ?></a></div>
                            <div class="row-data"><?= $valuePlace['new_name'] ?></div>
-                           <div class="row-data"><?= $valuePlace['date_and_number_of_resolve'] ?></div>
+                           <div class="row-data"><?= $valuePlace['resolve_date'] ?></div>
                            <div class="row-data"> 
                               <?php if($valuePlace['eponim']): ?>
                                  <?php 
