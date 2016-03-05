@@ -1,30 +1,32 @@
 <?php if ($areas): ?>
-   <div class="table-block">
-      <h3 class='place-title'>
-         Райони
-      </h3>
-      <div class="wrapper-table">
-         <div class="table-content">
-            <div class="table-row header-table">
-               <div class="col">Стара назва</div>
-               <div class="col">Нова назва</div>
-               <div class="col">Дата прийняття</div>
-               <div class="col">На честь</div>
+   <div class="current_table now">
+      <div class="table-block">
+         <h3 class='place-title'>
+            Райони
+         </h3>
+         <div class="wrapper-table">
+            <div class="table-content">
+               <div class="table-row header-table">
+                  <div class="col">Стара назва</div>
+                  <div class="col">Нова назва</div>
+                  <div class="col">Дата прийняття</div>
+                  <div class="col">На честь</div>
+               </div>
             </div>
-         </div>
-         <div class="table-row">
-            <div class="left-hand">
+            <div class="table-row">
+               <div class="left-hand">
 
-            </div>
-            <div class="rigth-hand">
-               <?php foreach ($areas as $keyArea => $valueArea): ?>
-                  <div class="row">
-                     <div class="row-data"><?= $valueArea['old_name'] ?></div>
-                     <div class="row-data"><?= $valueArea['new_name'] ?></div>
-                     <div class="row-data">19.02.2016</div>
-                     <div class="row-data"></div>
-                  </div>
-               <?php endforeach ?>
+               </div>
+               <div class="rigth-hand">
+                  <?php foreach ($areas as $keyArea => $valueArea): ?>
+                     <div class="row">
+                        <div class="row-data"><?= $valueArea['old_name'] ?></div>
+                        <div class="row-data"><?= $valueArea['new_name'] ?></div>
+                        <div class="row-data">19.02.2016</div>
+                        <div class="row-data"></div>
+                     </div>
+                  <?php endforeach ?>
+               </div>
             </div>
          </div>
       </div>

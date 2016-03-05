@@ -1,11 +1,11 @@
 
 <h1 class='page-title'>
-	Як переіменували в м. Кіровоград вулицю <?= $street['old_name'] ?>?
+	Як переіменували в м. Кіровоград вулицю <span style='font-weight: 500'><?= $street['old_name'] ?></span>?
 </h1>
 
 <div class="page-body street" >	
 	<h2>
-		<?= $area['old_name'] ?> (<?= $area['new_name'] ?>)
+		Район: <b><?= $area['new_name'] ?> (<?= $area['old_name'] ?>)</b>
 	</h2>
 	<h3>
 		<?= $street['object_type'] ?>
