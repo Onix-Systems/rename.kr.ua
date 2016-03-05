@@ -77,7 +77,7 @@ $(function() {
 						 			oldName = oldName.replace( new RegExp( oldName.substr(startToIndexReplaceOld, search.length), 'i'), '<b>'+oldName.substr(startToIndexReplaceOld, search.length)+'</b>');
 
 						 		html += '<div class="row">'
-						 				+'<div class="row-data"><a href="/street/view/id/'+valPlace.id+'">'+oldName+'<a></div>'
+						 				+'<div class="row-data"><a href="/street/view/id/'+valPlace.id+'">'+oldName+'</a></div>'
 						 				+'<div class="row-data">'+newName+'</div>'
 						 				+'<div class="row-data">'+valPlace.date_and_number_of_resolve+'</div>';
 
