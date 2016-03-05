@@ -49,7 +49,7 @@
 
 	<!-- Google Maps Кіровограду, и отметить на ней текущую улицу/  -->
 	<div id="map-canvas" style="height:390px;"></div>
-	<input type="hidden" value='Кировоград, <?= $street['old_name'] ?>' id='address'>
+	<input type="hidden" value='Кіровоград, <?= $street['old_name'] ?>' id='address'>
 </div>
 
 
