@@ -428,6 +428,7 @@ html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-han
 body .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row .row-data:nth-child(3),
 html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row .row-data:nth-child(3) {
   width: 160px;
+  max-width: 160px;
 }
 body .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row .row-data:nth-child(4),
 html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row .row-data:nth-child(4) {
