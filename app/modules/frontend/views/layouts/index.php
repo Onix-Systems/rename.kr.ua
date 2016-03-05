@@ -1,65 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title><?= $pageTitle; ?></title>
-      <script src='/assets/libs/js/jquery-2.2.0.min.js'></script>
-      <!-- Bootstrap core CSS -->
-      <link href="/assets/libs/css/bootstrap.min.css" rel="stylesheet">
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <link href="/assets/libs/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-      <!-- Custom styles for this template -->
-      <link href="/assets/libs/css/jumbotron-narrow.css" rel="stylesheet">
-      <link href="/assets/css/main.css" rel="stylesheet">
-      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-      <!--[if lt IE 9]><script src="../..//assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-      <script src="/assets/libs/js/ie-emulation-modes-warning.js"></script>
-      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Rename.kr.ua</title>
+		<link rel="stylesheet" href="/assets/css/main.min.css" type='text/css'>
+		<script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-1245735-40', 'auto');
-        ga('send', 'pageview');
+			ga('create', 'UA-1245735-40', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		
 
-      </script>
-      <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js "></script>
-   </head>
-   <body>
-      <!-- <div style='    background: url(assets/images/rename-header.jpg) no-repeat center center;background-size: cover;width: 100%;height: 100%;position: fixed;z-index: -1;opacity: 0.1;top: 0;'></div> -->
-      <div class="container" style='border-radius: 5px;padding-top: 20px;background: #fff;box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.33);'>
-         <div class="header clearfix">
-            <nav>
-               <ul class="nav nav-pills pull-right">
-                  <li role="presentation" class="<?= $this->config->route['controllerId'] == 'MainController' ? 'active' : '' ?>"><a href="/">Головна</a></li>
-                  <li role="presentation" class='<?= $this->config->route['controllerId'] == 'AboutController' ? 'active' : '' ?>'><a href="/about">Про проект</a></li>
-                  <li role="presentation" class='<?= $this->config->route['controllerId'] == 'DocsController' ? 'active' : '' ?>'><a href="/docs">API</a></li>
-               </ul>
-            </nav>
-            <h3 class="text-muted"><a href="/" style='color: inherit;'>Rename.kr.ua</a></h3>
-         </div>
-         <!-- <img src="assets/images/rename-header.jpg" width='100%' style='margin-bottom: 20px; border-radius: 5px;' alt=""> -->
-      	<?= $content ?>
-         <footer class="footer">
-            <p>&copy; Onix-Systems 2016 </p>
-         </footer>
-      </div>
-      <!-- /container -->
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <a href="#" onclick="FreshWidget.show(); return false;" class='support'></a>
-      <script type="text/javascript"> FreshWidget.init("", {"queryString": "&widgetType=popup&screenshot=no", "widgetType": "popup", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#006063", "backgroundImage": "", "alignment": "4", "offset": "-1500px", "formHeight": "500px", "url": "https://onixsystems.freshdesk.com"} ); </script>
-      <script src="/assets/libs/js/ie10-viewport-bug-workaround.js"></script>
-      <script src="/assets/js/main.js"></script>
-   </body>
+		<header class='header'>
+			<div class="header-content">
+				<div class="top-header">
+					<a href="/" class="logo">Rename.kr.ua</a>
+					<ul class='main-menu'>
+						<li <?= $this->config->route['controllerId'] == 'MainController' ? 'class="active" data-active="1"' : '' ?> >
+							<a href="/">Головна</a>
+						</li>
+						<li <?= $this->config->route['controllerId'] == 'AboutController' ? 'class="active" data-active="1"' : '' ?>>
+							<a href="/about">Про проект</a>
+						</li>
+						<li <?= $this->config->route['controllerId'] == 'DocsController' ?' class="active" data-active="1"' : '' ?>>
+							<a href="/docs">Розробникам</a>
+						</li>
+					</ul>
+				</div>
+				<h1 class='main-title' <?= $this->config->route['controllerId'] != 'MainController' ? 'style="margin-top: 130px;"' : false; ?>>Нові назви вулиць в місті <span>Кіровоград</span></h1>
+				<?php if ($this->config->route['controllerId'] == 'MainController'): ?>
+					<div class="search_wrapper">
+						<input type="text" name='search' placeholder='Введіть назву'>
+					</div>
+					<ul class='alphabet'>
+						<li><a href="#" >1</a></li>
+						<li><a href="#" >2</a></li>
+						<li><a href="#" >3</a></li>
+						<li><a href="#" >4</a></li>
+						<li><a href="#" >5</a></li>
+						<li><a href="#" >6</a></li>
+						<li><a href="#" >9</a></li>
+						<li><a href="#" >А</a></li>
+						<li><a href="#" >Б</a></li>
+						<li><a href="#" >В</a></li>
+						<li><a href="#" >Г</a></li>
+						<li><a href="#" >Д</a></li>
+						<li><a href="#" >Е</a></li>
+						<li><a href="#" >Ж</a></li>
+						<li><a href="#" >І</a></li>
+						<li><a href="#" >К</a></li>
+						<li><a href="#" >Л</a></li>
+						<li><a href="#" >М</a></li>
+						<li><a href="#" >Н</a></li>
+						<li><a href="#" >О</a></li>
+						<li><a href="#" >П</a></li>
+						<li><a href="#" >Р</a></li>
+						<li><a href="#" >С</a></li>
+						<li><a href="#" >Т</a></li>
+						<li><a href="#" >У</a></li>
+						<li><a href="#" >Ф</a></li>
+						<li><a href="#" >Ч</a></li>
+						<li><a href="#" >Ш</a></li>
+						<li><a href="#" >Щ</a></li>
+					</ul>
+				<?php endif ?>
+			</div>
+		</header>
+		
+		<div class="content-wrapper">
+			<div class="content">
+				
+				<?= $content ?>
+
+			</div>
+
+			<div class="advertisement">
+				<a href="https://www.digitalocean.com/" target='__blank'>
+					<img src="/assets/images/banner.gif" alt="">
+				</a>
+			</div>
+
+		</div>
+
+		
+
+
+		<footer class='footer'>
+			<div class="footer-content">
+				<ul class="footer-menu">
+					<li>
+						<a href="/">Головна</a>
+					</li>
+					<li>
+						<a href="/about">Про проект</a>
+					</li>
+					<li>
+						<a href="/docs">Розробникам</a>
+					</li>
+				</ul>
+				<div class="social">
+					<div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=04" data-services="twitter,facebook"></div>
+				</div>
+			</div>
+			<div class="underline"></div>
+			<div class="footer-content">
+				<div class="copyrything">
+					© 2016 Rename. All Rights Reserved.
+				</div>
+				<div class="development-by">
+					<span>Разработано в:</span>
+					<a href="https://onix-systems.com" target='__blank'>
+						<img src="https://onix-systems.com/img/static/onix-logo.svg" alt="Onix-Systems">
+					</a>
+				</div>
+			</div>
+		</footer>
+
+
+		<script src='/assets/js/common.min.js'></script>
+	</body>
 </html>

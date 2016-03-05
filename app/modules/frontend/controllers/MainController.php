@@ -7,15 +7,14 @@ class MainController extends IndexController
 	{
 		$this->pageTitle = 'Rename.kr.ua - Нові назви вулиць міста Кіровограда';
 		
-		$this->render = ['main', [
-									'data' => Sili::$model->data->getData([
-												//Order by
-												'ORDER' => 'old_name', 
-												//Where
-												'old_name[!]' => ''
-											]),
-									'areas' => Sili::$db->select('areas', '*')
+		$responce = [];
+		foreach (Sili::$model->data->getData(['ORDER' => 'old_name', 'old_name[!]' => '']) as $key => $value) 
+			$responce[mb_substr($value['old_name'], 0, 1)][] = $value;
 
+		$this->render = ['main', [
+									'data' => $responce,
+									'areas' => Sili::$db->select('areas', '*'),
+									'jsonRespounce' => json_encode($responce)
 								 ]
 						];
 
