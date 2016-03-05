@@ -529,3 +529,19 @@ html .advertisement {
   background: #f7f7f7;
   padding-bottom: 29px;
 }
+.support {
+  position: fixed;
+  right: -50px;
+  width: 140px;
+  height: 40px;
+  background: url(../images/supp.png) center center no-repeat;
+  top: 82px;
+  background-size: contain;
+  color: transparent;
+  display: block;
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  border-radius: 30px;
+  background-size: cover;
+}

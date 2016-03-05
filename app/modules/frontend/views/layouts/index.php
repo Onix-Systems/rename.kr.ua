@@ -3,9 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<title><?= $pageTitle ?></title>
+		<meta property="fb:app_id" content="1050430195020937" />
+		<meta property="og:title" content="<?= $pageTitle ?>" />
+		<meta property="og:type" content="article">
+		<meta property="og:site_name" content="Переіменування вулиць в місті Кіровоград в зв*язку з вимогою закону про декомунізацію" />
+		<meta property="og:url" content="<?= $baseUrl ?>" />
+		<?= $layoutVars['meta'] ?>	
 		<link rel="stylesheet" href="/assets/css/main.min.css" type='text/css'>
 		<script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js "></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -15,12 +22,7 @@
 			ga('create', 'UA-1245735-40', 'auto');
 			ga('send', 'pageview');
 		</script>
-		<meta property="fb:app_id" content="1050430195020937" />
-		<meta property="og:title" content="<?= $pageTitle ?>" />
-		<meta property="og:type" content="article">
-		<meta property="og:site_name" content="Переіменування вулиць в місті Кіровоград в зв*язку з вимогою закону про декомунізацію" />
-		<meta property="og:url" content="<?= $baseUrl ?>" />
-		<?= $layoutVars['meta'] ?>	
+		
 	</head>
 	<body>
 		
@@ -130,7 +132,8 @@
 			</div>
 		</footer>
 
-
+		<a href="#" onclick="FreshWidget.show(); return false;" class='support'></a>
+      	<script type="text/javascript"> FreshWidget.init("", {"queryString": "&widgetType=popup&screenshot=no", "widgetType": "popup", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#006063", "backgroundImage": "", "alignment": "4", "offset": "-1500px", "formHeight": "500px", "url": "https://onixsystems.freshdesk.com"} ); </script>
 		<script src='/assets/js/common.js'></script>
 	</body>
 </html>
