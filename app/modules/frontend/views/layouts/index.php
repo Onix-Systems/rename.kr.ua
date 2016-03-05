@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Rename.kr.ua</title>
+		<title><?= $pageTitle ?></title>
 		<link rel="stylesheet" href="/assets/css/main.min.css" type='text/css'>
 		<script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
