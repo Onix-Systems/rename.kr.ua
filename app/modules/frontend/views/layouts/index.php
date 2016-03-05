@@ -125,6 +125,6 @@
 		</footer>
 
 
-		<script src='/assets/js/common.min.js'></script>
+		<script src='/assets/js/common.js'></script>
 	</body>
 </html>
