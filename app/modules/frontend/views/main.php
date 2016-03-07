@@ -61,7 +61,13 @@
                         <div class="row">
                            <div class="row-data"><a href="/street/view/id/<?= $valuePlace['id'] ?>"><?= $valuePlace['old_name'] ?></a></div>
                            <div class="row-data"><?= $valuePlace['new_name'] ?></div>
-                           <div class="row-data"><?= $valuePlace['resolve_date'] ?></div>
+                           <div class="row-data">
+                           <?php if ($valuePlace['project']): ?>
+                              <span style='color: red'>Розглядаеться</span>
+                           <?php else: ?>
+                              <?= $valuePlace['resolve_date'] ?>
+                           <?php endif; ?>
+                           </div>
                            <div class="row-data"> 
                               <?php if($valuePlace['eponim']): ?>
                                  <?php 
