@@ -102,7 +102,7 @@
 			</div>
 
 			<div class="advertisement">
-				<a href="https://www.digitalocean.com/" target='__blank'>
+				<a href="https://www.digitalocean.com/" target='__blank' rel="nofollow">
 					<img src="/assets/images/banner.gif" alt="">
 				</a>
 			</div>
