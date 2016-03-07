@@ -62,9 +62,14 @@ initialize();
     geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(-34.397, 150.644);
     var mapOptions = {
-      zoom: 16,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+		zoom: 16,
+		center: latlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		scrollwheel: false,
+		navigationControl: false,
+		mapTypeControl: false,
+		scaleControl: false,
+		draggable: false,
     }
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     codeAddress();
