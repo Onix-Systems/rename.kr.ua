@@ -10,6 +10,8 @@
 		<meta property="og:url" content="<?= $baseUrl ?>" />
 		<?= $layoutVars['meta'] ?>	
 		<link rel="stylesheet" href="/assets/css/main.min.css" type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css">
+		<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.js' type='text/javascript'></script>-->
 		<script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 		<script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js "></script>
@@ -26,8 +28,8 @@
 	</head>
 	<body>
 		
-
-		<header class='header'>
+		
+		<header class='header '>
 			<div class="header-content">
 				<div class="top-header">
 					<a href="/" class="logo">Rename.kr.ua</a>
@@ -79,10 +81,19 @@
 						<li><a href="#" >Ш</a></li>
 						<li><a href="#" >Щ</a></li>
 					</ul>
+					<div class="header-row">
+						<div class="col animated current-letter">1</div>
+						<div class="col">Стара назва</div>
+						<div class="col">Нова назва</div>
+						<div class="col">Дата прийняття</div>
+						<div class="col">На честь</div>
+		            </div>
 				<?php endif ?>
 			</div>
 		</header>
 		
+		<div class="invisible-height"></div>
+
 		<div class="content-wrapper">
 			<div class="content">
 				
@@ -134,6 +145,6 @@
 
 		<a href="#" onclick="FreshWidget.show(); return false;" class='support'></a>
       	<script type="text/javascript"> FreshWidget.init("", {"queryString": "&widgetType=popup&screenshot=no", "widgetType": "popup", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#006063", "backgroundImage": "", "alignment": "4", "offset": "-1500px", "formHeight": "500px", "url": "https://onixsystems.freshdesk.com"} ); </script>
-		<script src='/assets/js/common.js'></script>
+		<script src='/assets/js/common.min.js'></script>
 	</body>
 </html>

@@ -12,15 +12,87 @@ body, html{
 	height: 100%;
 	width: 100%;
 	background: #f7f7f7;
+	.invisible-height{
+		height: 400px;
+		width: 100%;
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
 	.header{
 		width: 100%;
 		height: 400px;
 		background: url('../images/head-bg.jpg') no-repeat top center;
 		background-size: cover;
+		&.fixed{
+			height: 185px;
+			background: #fff;
+			position: fixed;
+			z-index: 2;
+			box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.61);
+			top: 0;
+			.header-content{
+				.top-header{
+					display: none;
+				}
+				.main-title{
+					display: none;
+				}
+				.search_wrapper{
+					margin-top: 15px;
+				}
+				.alphabet{
+					border-bottom: 1px solid #e7ebee;
+					padding-bottom: 10px;
+					li{
+						a{
+							color: #2a9deb;
+							&:hover{
+								border: 1px solid #2a9deb;
+							}
+						}
+					}
+				}
+				.header-row{
+					display: block;
+					width: 100%;
+					padding-top: 16px;
+					box-sizing: border-box;
+					overflow: hidden;
+					.col{
+						height: 100%;
+						font-family: 'Roboto', sans-serif;
+						text-align: left;
+						padding-left: 20px;
+						float: left;
+						font-size: 14px;
+						font-weight: 500;
+						&:nth-child(1){
+							width: 50px;
+							padding-left: 0px;
+							text-align: center;
+						}
+						&:nth-child(2){
+							width: 265px;
+						}
+						&:nth-child(3){
+							width: 266px;
+						}
+						&:nth-child(4){
+							width: 140px;
+						}
+					}
+				}
+			}
+		}
 		.header-content{
 			width: 940px;
 			height: 100%;
 			margin: 0 auto;
+			.header-row{
+				display: none;
+			}
 			.top-header{
 				padding-top: 18px;
 				width: 100%;

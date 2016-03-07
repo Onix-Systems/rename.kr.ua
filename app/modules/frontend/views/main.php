@@ -42,7 +42,7 @@
       </h3>
       <div class="wrapper-table">
          <div class="table-content">
-            <div class="table-row header-table">
+            <div class="table-row header-table streets-table">
                <div class="col">Стара назва</div>
                <div class="col">Нова назва</div>
                <div class="col">Дата прийняття</div>

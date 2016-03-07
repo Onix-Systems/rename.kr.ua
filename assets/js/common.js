@@ -1,6 +1,6 @@
 $(function() {
 	
-
+	animateHeader();
 
 	$('.main-menu li').hover(function(){
 		$('.main-menu li').removeClass('active');
@@ -11,12 +11,15 @@ $(function() {
 	});
 
 	$(document).on('click', '.alphabet li a', function(event) {
-		console.log(123);
 		event.preventDefault();
 		var aRow = $(document).find('.now .left-hand[data-letter="'+$(this).text()+'"]');
+		var heightToScroll = aRow.offset().top;
+		if ($('header').hasClass('fixed'))
+			heightToScroll = heightToScroll - 183;
+		
 		if (aRow) {
 			$('html, body').animate({
-		        scrollTop: aRow.offset().top
+		        scrollTop: heightToScroll
 		    }, 2000);
 		}
 	});
@@ -27,7 +30,9 @@ $(function() {
 		data = JSON.parse($('#responce').html());
 	};
 
-	console.log(data);
+	$(window).scroll(function(event) {
+		animateHeader();
+	});
 
 	if (data) {
 		$(document).on('keyup', 'input[name="search"]', function(event) {
@@ -79,7 +84,7 @@ $(function() {
 						 		html += '<div class="row">'
 						 				+'<div class="row-data"><a href="/street/view/id/'+valPlace.id+'">'+oldName+'</a></div>'
 						 				+'<div class="row-data">'+newName+'</div>'
-						 				+'<div class="row-data">'+valPlace.date_and_number_of_resolve+'</div>';
+						 				+'<div class="row-data">'+valPlace.resolve_date+'</div>';
 
 						 		var eponimRes = '';
 						 		if (valPlace.eponim) {
@@ -109,6 +114,30 @@ $(function() {
 
 		});
 
+	}
+
+	function animateHeader(){
+		var windowOffsetTop = $(window).scrollTop();
+		var elementOffsetTop = $('.streets-table').offset().top;
+		if (windowOffsetTop + 180 > elementOffsetTop) {
+			$('header').addClass('fixed animated fadeInDown');
+			$('.invisible-height').addClass('active');
+		}else{
+			$('.invisible-height').removeClass('active');
+			$('header').removeClass('fixed animated fadeInDown');
+		}
+
+		var els = {};
+		$('.left-hand').each(function(index, el) {
+			if ($(this).offset().top < $(window).scrollTop() + 185) {
+				els[index] = $(this);	
+			};
+		});
+		var e = els[Object.keys(els)[Object.keys(els).length - 1]];
+		if (e) 
+			if ($('.current-letter').text() != e.text()) {
+				$('.current-letter').text(e.text());	
+			}
 	}
 
 });
