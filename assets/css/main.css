@@ -417,6 +417,18 @@ html .content-wrapper .content .page-body {
   box-sizing: border-box;
   padding-top: 23px;
 }
+body .content-wrapper .content .page-body.error-page,
+html .content-wrapper .content .page-body.error-page {
+  margin-top: 30px;
+  background: transparent;
+  box-shadow: none;
+}
+body .content-wrapper .content .page-body.error-page h1,
+html .content-wrapper .content .page-body.error-page h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 23px;
+  color: #333333;
+}
 body .content-wrapper .content .page-body code,
 html .content-wrapper .content .page-body code {
   overflow: hidden;
