@@ -24,6 +24,7 @@ class IndexController extends Controller
 	}
 
 	public function isError($code = false){
+		header("HTTP/1.0 404 Not Found");
 		$this->layout = 'error';
 		$this->render = ['404'];
 	}
