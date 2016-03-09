@@ -84,7 +84,7 @@ $(function() {
 						 		html += '<div class="row">'
 						 				+'<div class="row-data"><a href="/street/view/id/'+valPlace.id+'">'+oldName+'</a></div>'
 						 				+'<div class="row-data">'+newName+'</div>'
-						 				+'<div class="row-data">'+valPlace.resolve_date+'</div>';
+						 				+'<div class="row-data">'+ (valPlace.project ? "<span style='color: red'>Розглядаеться</span>" : valPlace.resolve_date) +'</div>';
 
 						 		var eponimRes = '';
 						 		if (valPlace.eponim) {
@@ -141,12 +141,3 @@ $(function() {
 	}
 
 });
-(function() {
-  if (window.pluso)if (typeof window.pluso.start == "function") return;
-  if (window.ifpluso==undefined) { window.ifpluso = 1;
-    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-    var h=d[g]('body')[0];
-    h.appendChild(s);
- }})();

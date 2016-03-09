@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title><?= $pageTitle ?></title>
 		<meta property="fb:app_id" content="1050430195020937" />
+		<link rel="icon" type="image/png" href="favicon.png" />
 		<meta property="og:title" content="<?= $pageTitle ?>" />
 		<meta property="og:type" content="article">
 		<meta property="og:site_name" content="Переіменування вулиць в місті Кіровоград в зв*язку з вимогою закону про декомунізацію" />
@@ -27,7 +28,15 @@
 		
 	</head>
 	<body>
-		
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5&appId=1050430195020937";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
 		
 		<header class='header '>
 			<div class="header-content">
@@ -126,7 +135,8 @@
 					</li>
 				</ul>
 				<div class="social">
-					<div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=04" data-services="twitter,facebook"></div>
+					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+					<div class="fb-share-button" data-layout="button_count"></div>
 				</div>
 			</div>
 			<div class="underline"></div>
@@ -142,9 +152,10 @@
 				</div>
 			</div>
 		</footer>
-
+		
 		<a href="#" onclick="FreshWidget.show(); return false;" class='support'></a>
       	<script type="text/javascript"> FreshWidget.init("", {"queryString": "&widgetType=popup&screenshot=no", "widgetType": "popup", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#006063", "backgroundImage": "", "alignment": "4", "offset": "-1500px", "formHeight": "500px", "url": "https://onixsystems.freshdesk.com"} ); </script>
+      	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		<script src='/assets/js/common.min.js'></script>
 	</body>
 </html>

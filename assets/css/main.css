@@ -595,9 +595,14 @@ body .footer .footer-content .social,
 html .footer .footer-content .social {
   float: right;
 }
-body .footer .footer-content .social .pluso,
-html .footer .footer-content .social .pluso {
-  margin-top: -12px;
+body .footer .footer-content .social *,
+html .footer .footer-content .social * {
+  display: block;
+  float: left;
+}
+body .footer .footer-content .social .fb-share-button,
+html .footer .footer-content .social .fb-share-button {
+  margin-left: 5px;
 }
 body .footer .underline,
 html .footer .underline {
