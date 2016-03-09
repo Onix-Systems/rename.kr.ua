@@ -1,0 +1,3 @@
+# robots.txt for http://rename.kr.ua
+User-Agent: *
+Disallow: /api/v1/streets
