@@ -59,7 +59,7 @@ $(function() {
 
 		if (search) {
 
-			history.pushState('', '', '?q='+search);
+			history.replaceState('', '', '?q='+search);
 
 			$.each(data, function(indexletter, valLetter) {
 				 $.each(valLetter, function(indexPlace, valPlace) {
@@ -125,7 +125,7 @@ $(function() {
 			}
 
 		}else{
-			history.pushState('', '', '/');
+			history.replaceState('', '', '/');
 			$('.current_table').addClass('now').show();
 			$('.search_table').removeClass('now').hide();
 		}
