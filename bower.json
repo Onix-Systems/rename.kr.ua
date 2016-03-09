@@ -1,0 +1,9 @@
+{
+  "name": "front",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "less": "^2.6.1"
+  },
+  "devDependencies": {}
+}

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Onix-Systems/rename.kr.ua#readme",
   "dependencies": {
+    "bower": "^1.7.7",
     "gulp-install": "^0.6.0",
     "gulp-less": "^3.0.5"
   },
