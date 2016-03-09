@@ -296,6 +296,16 @@ html .content-wrapper .content .page-body {
   box-sizing: border-box;
   padding-top: 23px;
 }
+body .content-wrapper .content .page-body code,
+html .content-wrapper .content .page-body code {
+  overflow: hidden;
+  height: auto;
+  display: block;
+  background: #f7f9fa;
+  padding-top: 20px;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
 body .content-wrapper .content .page-body.street p,
 html .content-wrapper .content .page-body.street p {
   margin-bottom: 22px;
@@ -436,6 +446,15 @@ html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-han
   width: 100%;
   min-height: 40px;
   display: table;
+  cursor: pointer;
+}
+body .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row:hover,
+html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row:hover {
+  background: #f7f9fa;
+}
+body .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row:hover .row-data,
+html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row:hover .row-data {
+  border-bottom: transparent 1px solid;
 }
 body .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row:last-child,
 html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row:last-child {

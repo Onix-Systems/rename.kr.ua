@@ -10,9 +10,9 @@
 		<meta property="og:site_name" content="Переіменування вулиць в місті Кіровоград в зв*язку з вимогою закону про декомунізацію" />
 		<meta property="og:url" content="<?= $baseUrl ?>" />
 		<?= $layoutVars['meta'] ?>	
-		<link rel="stylesheet" href="/assets/css/main.less" type='text/less'>
+		<link rel="stylesheet" href="/assets/css/main.min.css" type='text/css'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css">
-		 <script src='https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.js' type='text/javascript'></script>
+		<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.js' type='text/javascript'></script>-->
 		<script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 		<script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js "></script>
@@ -156,6 +156,6 @@
 		<a href="#" onclick="FreshWidget.show(); return false;" class='support'></a>
       	<script type="text/javascript"> FreshWidget.init("", {"queryString": "&widgetType=popup&screenshot=no", "widgetType": "popup", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#006063", "backgroundImage": "", "alignment": "4", "offset": "-1500px", "formHeight": "500px", "url": "https://onixsystems.freshdesk.com"} ); </script>
       	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		<script src='/assets/js/common.js'></script>
+		<script src='/assets/js/common.min.js'></script>
 	</body>
 </html>
