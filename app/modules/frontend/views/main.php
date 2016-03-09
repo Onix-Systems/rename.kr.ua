@@ -63,7 +63,7 @@
                            <div class="row-data"><?= $valuePlace['new_name'] ?></div>
                            <div class="row-data">
                            <?php if ($valuePlace['project']): ?>
-                              <span style='color: red'>Розглядаеться</span>
+                              <span style='color: #eb2a3c;'>Розглядається</span>
                            <?php else: ?>
                               <?= $valuePlace['resolve_date'] ?>
                            <?php endif; ?>

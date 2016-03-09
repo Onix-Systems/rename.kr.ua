@@ -1,6 +1,4 @@
 $(function() {
-	
-	animateHeader();
 
 	$('.main-menu li').hover(function(){
 		$('.main-menu li').removeClass('active');
@@ -30,10 +28,6 @@ $(function() {
 		data = JSON.parse($('#responce').html());
 	};
 
-	$(window).scroll(function(event) {
-		animateHeader();
-	});
-
 	var urlSearch = getUrlParameter('q'),
 		searchInp = $('input[name="search"]');
 
@@ -43,6 +37,10 @@ $(function() {
 	}
 
 	if (data) {
+		animateHeader();
+		$(window).scroll(function(event) {
+			animateHeader();
+		});
 		$(document).on('keyup', 'input[name="search"]', function(event) {
 			event.preventDefault();
 			search($(this).val());
@@ -101,7 +99,7 @@ $(function() {
 					 		html += '<div class="row">'
 					 				+'<div class="row-data"><a href="/street/view/id/'+valPlace.id+'">'+oldName+'</a></div>'
 					 				+'<div class="row-data">'+newName+'</div>'
-					 				+'<div class="row-data">'+ (valPlace.project ? "<span style='color: red'>Розглядаеться</span>" : valPlace.resolve_date) +'</div>';
+					 				+'<div class="row-data">'+ (valPlace.project ? "<span style='color: #eb2a3c;'>Розглядається</span>" : valPlace.resolve_date) +'</div>';
 
 					 		var eponimRes = '';
 					 		if (valPlace.eponim) {

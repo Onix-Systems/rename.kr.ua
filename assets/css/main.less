@@ -258,6 +258,15 @@ body, html{
 				margin-bottom: 30px;
 				box-sizing: border-box;
 				padding-top: 23px;
+				code{
+					overflow: hidden;
+					height: auto;
+					display: block;
+					background: #f7f9fa;
+					padding-top: 20px;
+					line-height: 24px;
+					margin-bottom: 40px;
+				}
 				&.street{
 					p{
 						margin-bottom: 22px;
@@ -372,6 +381,13 @@ body, html{
 								width: 100%;
 								min-height: 40px;
 								display: table;
+								cursor: pointer;
+								&:hover{
+									background: #f7f9fa;
+									.row-data{
+										border-bottom: transparent 1px solid;
+									}
+								}
 								&:last-child{
 									border-bottom: 0;
 								}
