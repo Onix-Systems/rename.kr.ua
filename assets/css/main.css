@@ -312,7 +312,7 @@ html .header .header-content .main-title:after {
   width: 297px;
   position: absolute;
   right: -312px;
-  background: url(http://rename.canabina.lc/assets/images/logo_kirovohrad.svg) no-repeat center center;
+  background: url(../images/logo_kirovohrad.svg) no-repeat center center;
   height: 127px;
   top: -40px;
 }
@@ -804,4 +804,65 @@ html .advertisement {
   -o-transform: rotate(-90deg);
   border-radius: 30px;
   background-size: cover;
+}
+@media screen and (max-width: 965px) {
+  html .header,
+  body .header {
+    height: auto;
+  }
+  html .header.fixed,
+  body .header.fixed {
+    height: auto;
+  }
+  html .header.fixed .header-content .alphabet,
+  body .header.fixed .header-content .alphabet {
+    margin-bottom: 0;
+  }
+  html .header.fixed .header-content .header-row,
+  body .header.fixed .header-content .header-row {
+    margin-bottom: 20px;
+  }
+  html .header .header-content,
+  body .header .header-content {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  html .header .header-content .main-title,
+  body .header .header-content .main-title {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-top: 45px;
+  }
+  html .header .header-content .main-title:after,
+  body .header .header-content .main-title:after {
+    right: 50%;
+    margin-right: -148px;
+    top: 50px;
+  }
+  html .header .header-content .search_wrapper,
+  body .header .header-content .search_wrapper {
+    margin-top: 145px;
+  }
+  html .header .header-content .alphabet,
+  body .header .header-content .alphabet {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  html .header .header-content .alphabet li,
+  body .header .header-content .alphabet li {
+    float: none;
+    display: inline-block;
+  }
+  html .content-wrapper,
+  body .content-wrapper {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  html .content-wrapper .content,
+  body .content-wrapper .content {
+    width: 100%;
+  }
 }

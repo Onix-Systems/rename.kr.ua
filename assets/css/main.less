@@ -288,7 +288,7 @@ body, html{
 					width: 297px;
 					position: absolute;
 					right: -312px;
-					background: url(http://rename.canabina.lc/assets/images/logo_kirovohrad.svg) no-repeat center center;
+					background: url(../images/logo_kirovohrad.svg) no-repeat center center;
 					height: 127px;
 					top: -40px;
 				}
@@ -716,4 +716,59 @@ body, html{
 	-o-transform: rotate(-90deg);
 	border-radius: 30px;
 	background-size: cover;
+}
+
+@media screen and(max-width: 965px){
+	html, body{
+		.header{
+			height: auto;
+			&.fixed{
+				height: auto;
+				.header-content{
+					.alphabet{
+						margin-bottom: 0;
+					}
+					.header-row{
+						margin-bottom: 20px;
+					}
+				}
+				
+			}
+			.header-content{
+				padding-right: 20px;
+				padding-left: 20px;
+				width: 100%;
+				box-sizing: border-box;
+				.main-title{
+					width: 100%;
+					text-align: center;
+					padding: 0;
+					margin-top: 45px;
+					&:after{
+						right: 50%;
+						margin-right: -148px;
+						top: 50px;
+					}
+				}
+				.search_wrapper{
+					margin-top: 145px;
+				}
+				.alphabet{
+					margin-bottom: 20px;
+					text-align: center;
+					li{
+						float: none;
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.content-wrapper{
+			padding: 15px;
+			box-sizing: border-box;
+			.content{
+				width: 100%;
+			}
+		} 
+	}
 }
