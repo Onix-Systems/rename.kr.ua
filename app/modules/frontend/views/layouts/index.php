@@ -44,7 +44,9 @@
 			<div class="header-content">
 				<div class="top-header">
 					<a href="/" class="logo">Rename.kr.ua</a>
+					<div class="hamburger menu-toogle"></div>
 					<ul class='main-menu'>
+						<li class='close menu-toogle'></li>
 						<li <?= $this->config->route['controllerId'] == 'MainController' ? 'class="active" data-active="1"' : '' ?> >
 							<a href="/">Головна</a>
 						</li>
@@ -63,6 +65,9 @@
 				<?php if ($this->config->route['controllerId'] == 'MainController'): ?>
 					<div class="search_wrapper">
 						<input type="text" name='search' placeholder='Введіть назву'>
+					</div>
+					<div class="open-alphabet">
+						<span>АБВ</span> По алфавіту &#9660;
 					</div>
 					<ul class='alphabet'>
 						<li><a href="#" >1</a></li>
@@ -117,7 +122,7 @@
 
 			<div class="advertisement">
 				<a href="https://www.digitalocean.com/" target='__blank' rel="nofollow">
-					<img src="/assets/images/banner.gif" alt="">
+					<img src="/assets/images/banner.gif" width='100%' >
 				</a>
 			</div>
 

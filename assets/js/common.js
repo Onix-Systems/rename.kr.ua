@@ -12,7 +12,7 @@ $(function() {
 		event.preventDefault();
 		var aRow = $(document).find('.now .left-hand[data-letter="'+$(this).text()+'"]');
 		var heightToScroll = aRow.offset().top;
-		if ($('header').hasClass('fixed'))
+		if ($('header').hasClass('fixed') && $(window).width() < 670)
 			heightToScroll = heightToScroll - 183;
 		
 		if (aRow) {
@@ -47,6 +47,17 @@ $(function() {
 		});
 	}
 
+	$(document).on('click', '.menu-toogle', function(event) {
+		event.preventDefault();
+		$('.main-menu').slideToggle();
+	});
+
+	$(document).on('click', '.open-alphabet', function(event) {
+		event.preventDefault();
+		$('.alphabet').slideToggle();
+	});
+
+	
 	
 
 
