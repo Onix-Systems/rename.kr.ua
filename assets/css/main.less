@@ -145,6 +145,13 @@ body, html{
 		height: 400px;
 		background: url('../images/head-bg.jpg') no-repeat top center;
 		background-size: cover;
+		.header-border{
+			width: 100%;
+			position: absolute;
+			height: 1px;
+			top: 71px;
+			background: rgba(255,255,255,0.20);
+		}
 		&.fixed{
 			height: 185px;
 			background: #fff;
@@ -152,6 +159,9 @@ body, html{
 			z-index: 2;
 			box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.61);
 			top: 0;
+			.header-border{
+				display: none;
+			}
 			.header-content{
 				.top-header{
 					display: none;
@@ -240,18 +250,18 @@ body, html{
 					display: block;
 					list-style: none;
 					li{
-						float: left;
 						width: auto;
-						padding: 14px;
-						padding-top: 10px;
+						padding-top: 8px;
 						letter-spacing: 0.5px;
-						padding-bottom: 12px;
+						padding-bottom: 10px;
 						transition: 0.4s;
+						border: 2px solid transparent;
+						padding-left: 13px;
+						letter-spacing: 0.5px;
+						padding-right: 11px;
+						float: left;
 						&.active{
-							background: #fff;
-							a{
-								color: #000;
-							}
+							border: 2px #fff solid;
 						}
 						a{
 							font-size: 15px;
@@ -264,20 +274,30 @@ body, html{
 				}
 			}
 			.main-title{
-				font-size: 60px;
+				font-size: 48px;
 				color: #fff;
 				font-family: 'Cuprum', sans-serif;
-				margin-top: 60px;
-				text-align: center;
-				span{
-					font-weight: 700;
+				margin-top: 83px;
+				text-align: left;
+				padding-left: 75px;
+				display: inline-block;
+				position: relative;
+				&:after{
+					content: ' ';
+					display: block;
+					width: 297px;
+					position: absolute;
+					right: -312px;
+					background: url(http://rename.canabina.lc/assets/images/logo_kirovohrad.svg) no-repeat center center;
+					height: 127px;
+					top: -40px;
 				}
 			}
 			.search_wrapper{
 				width: 100%;
 				box-sizing: border-box;
 				height: 65px;
-				margin-top: 48px;
+				margin-top: 67px;
 				border: 8px solid #dddddd;
 				background: #fff;
 				&:before{
@@ -297,7 +317,7 @@ body, html{
 					font-size: 16px;
 					font-family: 'Roboto', sans-serif;
 					padding-left: 52px;
-					margin-top: 15px;
+					margin-top: 13px;
 					width: 100%;
 					box-sizing: border-box;
 					&::-webkit-input-placeholder{
@@ -511,7 +531,6 @@ body, html{
 								width: 100%;
 								min-height: 40px;
 								display: table;
-								cursor: pointer;
 								&:hover{
 									background: #f7f9fa;
 									.row-data{

@@ -146,6 +146,14 @@ html .header {
   background: url('../images/head-bg.jpg') no-repeat top center;
   background-size: cover;
 }
+body .header .header-border,
+html .header .header-border {
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  top: 71px;
+  background: rgba(255, 255, 255, 0.2);
+}
 body .header.fixed,
 html .header.fixed {
   height: 185px;
@@ -154,6 +162,10 @@ html .header.fixed {
   z-index: 2;
   box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.61);
   top: 0;
+}
+body .header.fixed .header-border,
+html .header.fixed .header-border {
+  display: none;
 }
 body .header.fixed .header-content .top-header,
 html .header.fixed .header-content .top-header {
@@ -260,21 +272,19 @@ html .header .header-content .top-header .main-menu {
 }
 body .header .header-content .top-header .main-menu li,
 html .header .header-content .top-header .main-menu li {
-  float: left;
   width: auto;
-  padding: 14px;
-  padding-top: 10px;
-  letter-spacing: 0.5px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 10px;
   transition: 0.4s;
+  border: 2px solid transparent;
+  padding-left: 13px;
+  letter-spacing: 0.5px;
+  padding-right: 11px;
+  float: left;
 }
 body .header .header-content .top-header .main-menu li.active,
 html .header .header-content .top-header .main-menu li.active {
-  background: #fff;
-}
-body .header .header-content .top-header .main-menu li.active a,
-html .header .header-content .top-header .main-menu li.active a {
-  color: #000;
+  border: 2px #fff solid;
 }
 body .header .header-content .top-header .main-menu li a,
 html .header .header-content .top-header .main-menu li a {
@@ -286,22 +296,32 @@ html .header .header-content .top-header .main-menu li a {
 }
 body .header .header-content .main-title,
 html .header .header-content .main-title {
-  font-size: 60px;
+  font-size: 48px;
   color: #fff;
   font-family: 'Cuprum', sans-serif;
-  margin-top: 60px;
-  text-align: center;
+  margin-top: 83px;
+  text-align: left;
+  padding-left: 75px;
+  display: inline-block;
+  position: relative;
 }
-body .header .header-content .main-title span,
-html .header .header-content .main-title span {
-  font-weight: 700;
+body .header .header-content .main-title:after,
+html .header .header-content .main-title:after {
+  content: ' ';
+  display: block;
+  width: 297px;
+  position: absolute;
+  right: -312px;
+  background: url(http://rename.canabina.lc/assets/images/logo_kirovohrad.svg) no-repeat center center;
+  height: 127px;
+  top: -40px;
 }
 body .header .header-content .search_wrapper,
 html .header .header-content .search_wrapper {
   width: 100%;
   box-sizing: border-box;
   height: 65px;
-  margin-top: 48px;
+  margin-top: 67px;
   border: 8px solid #dddddd;
   background: #fff;
 }
@@ -324,7 +344,7 @@ html .header .header-content .search_wrapper input {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   padding-left: 52px;
-  margin-top: 15px;
+  margin-top: 13px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -579,7 +599,6 @@ html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-han
   width: 100%;
   min-height: 40px;
   display: table;
-  cursor: pointer;
 }
 body .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row:hover,
 html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row:hover {

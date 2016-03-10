@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title><?= $pageTitle ?></title>
 		<meta property="fb:app_id" content="1050430195020937" />
-		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="icon" type="image/png" href="favicon.ico" />
 		<meta property="og:title" content="<?= $pageTitle ?>" />
 		<meta property="og:type" content="article">
 		<meta property="og:site_name" content="Переіменування вулиць в місті Кіровоград в зв*язку з вимогою закону про декомунізацію" />
@@ -39,6 +39,7 @@
 		</script>
 		
 		<header class='header '>
+			<div class="header-border"></div>
 			<div class="header-content">
 				<div class="top-header">
 					<a href="/" class="logo">Rename.kr.ua</a>
@@ -52,9 +53,12 @@
 						<li <?= $this->config->route['controllerId'] == 'DocsController' ?' class="active" data-active="1"' : '' ?>>
 							<a href="/docs">Розробникам</a>
 						</li>
+						<li>
+							<a href="#">Зворотній звязок</a>
+						</li>
 					</ul>
 				</div>
-				<h1 class='main-title' <?= $this->config->route['controllerId'] != 'MainController' ? 'style="margin-top: 130px;"' : false; ?>>Нові назви вулиць в місті <span>Кіровоград</span></h1>
+				<h1 class='main-title' <?= $this->config->route['controllerId'] != 'MainController' ? 'style="margin-top: 130px;"' : false; ?>>Нові назви вулиць в місті </h1>
 				<?php if ($this->config->route['controllerId'] == 'MainController'): ?>
 					<div class="search_wrapper">
 						<input type="text" name='search' placeholder='Введіть назву'>
