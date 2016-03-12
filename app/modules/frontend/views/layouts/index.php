@@ -116,8 +116,8 @@
 			</div>
 
 			<div class="advertisement">
-				<a href="https://www.digitalocean.com/" target='__blank' rel="nofollow">
-					<img src="/assets/images/banner.gif" alt="">
+				<a href="https://m.do.co/c/d3caf0d5e9c6" target='__blank' rel="nofollow">
+					<img src="/assets/images/banner.gif" width='100%' >
 				</a>
 			</div>
 
