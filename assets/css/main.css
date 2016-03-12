@@ -146,6 +146,10 @@ html .header {
   background: url('../images/head-bg.jpg') no-repeat top center;
   background-size: cover;
 }
+body .header.mobile,
+html .header.mobile {
+  min-height: 400px;
+}
 body .header .header-border,
 html .header .header-border {
   width: 100%;
@@ -428,12 +432,12 @@ html .content-wrapper .content {
 }
 body .content-wrapper .content .page-title,
 html .content-wrapper .content .page-title {
-  height: 77px;
   font-family: 'Roboto', sans-serif;
   color: #333333;
   font-size: 22px;
   padding-top: 38px;
   box-sizing: border-box;
+  padding-bottom: 20px;
 }
 body .content-wrapper .content .page-body,
 html .content-wrapper .content .page-body {
@@ -1191,8 +1195,29 @@ html .advertisement {
     width: 50%;
     float: right;
   }
-  html .footer .footer-content .footer-menu li a,
-  body .footer .footer-content .footer-menu li a {
-    font-size: 13px;
+  html .footer .footer-content,
+  body .footer .footer-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  html .footer .footer-content .social,
+  body .footer .footer-content .social {
+    padding-bottom: 15px;
+  }
+  html .footer .footer-content .footer-menu,
+  body .footer .footer-content .footer-menu {
+    display: none;
+  }
+  html .footer .footer-content .copyrything,
+  body .footer .footer-content .copyrything {
+    text-align: center;
+    float: none;
+    height: 35px;
+  }
+  html .footer .footer-content .development-by,
+  body .footer .footer-content .development-by {
+    float: none;
+    margin: 0 auto;
+    width: 195px;
   }
 }

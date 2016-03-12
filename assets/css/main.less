@@ -145,6 +145,9 @@ body, html{
 		height: 400px;
 		background: url('../images/head-bg.jpg') no-repeat top center;
 		background-size: cover;
+		&.mobile{
+			min-height: 400px;
+		}
 		.header-border{
 			width: 100%;
 			position: absolute;
@@ -388,12 +391,12 @@ body, html{
 			margin: 0 auto;
 			height: auto;
 			.page-title{
-				height: 77px;
 				font-family: 'Roboto', sans-serif;
 				color: #333333;
 				font-size: 22px;
 				padding-top: 38px;
 				box-sizing: border-box;
+				padding-bottom: 20px;
 			}
 			.page-body{
 				width: 100%;
@@ -1106,12 +1109,23 @@ body, html{
 		}
 		.footer{
 			.footer-content{
+				padding-top: 0;
+				padding-bottom: 0;
+				.social{
+					padding-bottom: 15px;
+				}
 				.footer-menu{
-					li{
-						a{
-							font-size: 13px;
-						}
-					}
+					display: none;
+				}
+				.copyrything{
+					text-align: center;
+					float: none;
+					height: 35px;
+				}
+				.development-by{
+					float: none;
+					margin: 0 auto;
+					width: 195px;
 				}
 			}
 		}

@@ -39,12 +39,14 @@
 		}(document, 'script', 'facebook-jssdk'));
 		</script>
 		
-		<header class='header '>
+		<header class='header <?= $this->config->route['controllerId'] != 'MainController' ? 'mobile' : '' ?>'>
 			<div class="header-border"></div>
 			<div class="header-content">
 				<div class="top-header">
 					<a href="/" class="logo">Rename.kr.ua</a>
+					<div class="hamburger menu-toogle"></div>
 					<ul class='main-menu'>
+						<li class='close menu-toogle'></li>
 						<li <?= $this->config->route['controllerId'] == 'MainController' ? 'class="active" data-active="1"' : '' ?> >
 							<a href="/">Головна</a>
 						</li>
@@ -64,6 +66,9 @@
 					<div class="search_wrapper">
 						<input type="text" name='search' placeholder='Введіть назву'>
 					</div>
+					<div class="open-alphabet">
+ 						<span>АБВ</span> По алфавіту &#9660;
+ 					</div>
 					<ul class='alphabet'>
 						<li><a href="#" >1</a></li>
 						<li><a href="#" >2</a></li>
