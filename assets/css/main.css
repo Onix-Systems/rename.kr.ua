@@ -331,6 +331,7 @@ html .header .header-content .main-title:after {
   background: url(../images/logo_kirovohrad.svg) no-repeat center center;
   height: 127px;
   top: -40px;
+  background-size: cover;
 }
 body .header .header-content .search_wrapper,
 html .header .header-content .search_wrapper {
