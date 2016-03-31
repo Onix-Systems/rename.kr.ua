@@ -11,10 +11,9 @@ $(function() {
 	$(document).on('click', '.alphabet li a', function(event) {
 		event.preventDefault();
 		var aRow = $(document).find('.now .left-hand[data-letter="'+$(this).text()+'"]');
-		var heightToScroll = aRow.offset().top;
-		if ($('header').hasClass('fixed') && $(window).width() < 670)
-			heightToScroll = heightToScroll - 183;
-		
+		var heightToScroll = aRow.offset().top - 183;
+		if ($(window).width() < 670)
+			heightToScroll -=  37;
 		if (aRow) {
 			$('html, body').animate({
 		        scrollTop: heightToScroll

@@ -902,6 +902,13 @@ html .advertisement {
   body .content-wrapper .content {
     width: 100%;
   }
+  html .content-wrapper .content .page-title,
+  body .content-wrapper .content .page-title {
+    padding-left: 20px;
+    page-break-before: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+  }
   html .content-wrapper .content .table-block .wrapper-table .table-row .left-hand,
   body .content-wrapper .content .table-block .wrapper-table .table-row .left-hand {
     width: 5%;
