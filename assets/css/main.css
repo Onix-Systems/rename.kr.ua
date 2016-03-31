@@ -1198,6 +1198,7 @@ html .advertisement {
     width: 50%;
     float: left;
     clear: both;
+    padding-bottom: 15px;
   }
   html .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row .row-data:nth-child(4),
   body .content-wrapper .content .table-block .wrapper-table .table-row .rigth-hand .row .row-data:nth-child(4) {
