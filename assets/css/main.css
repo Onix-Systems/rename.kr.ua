@@ -1056,6 +1056,7 @@ html .advertisement {
     text-align: center;
     border: none;
     margin-bottom: 3em;
+    box-sizing: border-box;
   }
   html .header .header-content .top-header .main-menu li.close,
   body .header .header-content .top-header .main-menu li.close {
