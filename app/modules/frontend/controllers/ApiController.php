@@ -15,7 +15,6 @@ class ApiController extends IndexController
 					}
 				}
 				$data = Sili::$model->data->getData(['AND' => $filter]);
-				print_r($filter);
 				if ($data) {
 					echo json_encode($data);
 				}
