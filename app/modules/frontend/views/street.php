@@ -46,6 +46,32 @@
               ?>
           <?php endif; ?>
 	</p>
+	<?php 
+		$text = false;
+		switch ($street['resolve_date']) {
+			case '16.12.2014':
+				$text = 'Рішення Кіровоградської міської ради від 16.12.2014 № 3760 (<a href="http://www.kr-rada.gov.ua/files/decision/ua-rishennya-risenya-3760-16-12-14.pdf">http://www.kr-rada.gov.ua/files/decision/ua-rishennya-risenya-3760-16-12-14.pdf</a>)';
+				break;
+			case '19.02.2016':
+				$text = 'Розпорядження «Про перейменування вулиць, провулків та інших об’єктів топоніміки міста» № 24 від 19.02.2016 (<a href="http://www.kr-rada.gov.ua/files/content/files/raspod-20160223115224.pdf">http://www.kr-rada.gov.ua/files/content/files/raspod-20160223115224.pdf</a>)';
+				break;
+			case '23.02.2016':
+				$text = 'Рішення «Про перейменування вулиць, провулків та інших об’єктів топоніміки міста» Кіровоградської міської ради № 105 від 23.02.2016 р. (<a href="http://www.kr-rada.gov.ua/files/decision/ua-rishennya-risenya-105-23-02-16.pdf">http://www.kr-rada.gov.ua/files/decision/ua-rishennya-risenya-105-23-02-16.pdf</a>)';
+				break;
+			case '24.02.2014':
+				$text = 'Рішення Кіровоградської міської ради від 24.02.2014 № 2881 (<a href="http://www.kr-rada.gov.ua/files/decision/ua-rishennya-rishenya-2881-24-02-14.pdf">http://www.kr-rada.gov.ua/files/decision/ua-rishennya-rishenya-2881-24-02-14.pdf</a>)';
+				break;
+			case '11.11.2014':
+				$text = 'Рішення Кіровоградської міської ради від 11.11.2014 № 3613 (<a href="http://www.kr-rada.gov.ua/files/content/files/63-%2011.11.2014.pdf">http://www.kr-rada.gov.ua/files/content/files/63-%2011.11.2014.pdf</a>)';
+				break;
+		}
+
+	?>
+	<?php if ($text): ?>
+		<p>
+			<?= $text ?>
+		</p>
+	<?php endif ?>
 
 	<!-- Google Maps Кіровограду, и отметить на ней текущую улицу/  -->
 	<div id="map-canvas" style="height:390px;"></div>
@@ -69,7 +95,6 @@ initialize();
 		navigationControl: false,
 		mapTypeControl: false,
 		scaleControl: false,
-		draggable: false,
     }
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     codeAddress();
