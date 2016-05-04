@@ -12,9 +12,8 @@ class IndexController extends Controller
 
 		if ($this->engine->config->route['controllerId'] == 'StreetController') {
 			
-
 			$params = http_build_query([
-				'center' =>  $this->render[1]['street']['new_name'].' Кіровоград',
+				'center' =>  'Кіровоград, '.$this->render[1]['street']['new_name'],
 				'zoom' => 17,
 				'size' => '400x400',
 				'key' => 'AIzaSyAIgYm-xXlstUJPRLaOrfPQBsD3lMXrnuM'
