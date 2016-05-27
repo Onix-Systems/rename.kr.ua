@@ -480,10 +480,6 @@ body .content-wrapper .content .page-body.street p,
 html .content-wrapper .content .page-body.street p {
   margin-bottom: 22px;
 }
-body .content-wrapper .content .page-body.street b,
-html .content-wrapper .content .page-body.street b {
-  font-style: italic;
-}
 body .content-wrapper .content .page-body h2,
 html .content-wrapper .content .page-body h2 {
   font-size: 22px;
