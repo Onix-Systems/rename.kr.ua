@@ -57,7 +57,13 @@ $(function() {
 	});
 
 	
-	
+	$(document).on('click', '.to-top', function(event) {
+		event.preventDefault();
+		$('html, body').animate({
+			scrollTop: 0,
+			speed: 200
+		})
+	});
 
 
 	function search(query){

@@ -75,45 +75,73 @@
 
 	<!-- Google Maps Кіровограду, и отметить на ней текущую улицу/  -->
 	<div id="map-canvas" style="height:390px;"></div>
-	<input type="hidden" value='Кіровоград, <?= $street['old_name'] ?>' id='address'>
+	<input type="hidden" value='Кіровоград, <?= $street['object_type'] ?> <?= $street['old_name'] ?>' id='address'>
+	<input type="hidden" value='Кіровоград, <?= $street['object_type'] ?> <?= $street['new_name'] ?>' id='addressNew'>
 </div>
 
 
 
 <script>
+
 initialize();
-  var geocoder;
-  var map;
-  function initialize() {
+var geocoder;
+var map;
+
+function initialize() {
     geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(-34.397, 150.644);
     var mapOptions = {
-		zoom: 16,
-		center: latlng,
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		scrollwheel: false,
-		navigationControl: false,
-		mapTypeControl: false,
-		scaleControl: false,
+        zoom: 16,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
     }
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     codeAddress();
-  }
+}
+var counter = 0;
+function codeAddress(data) {
+	var address = document.getElementById('address').value;
+	if (data) {
+		if (data[1] == 'OK' && data[0].length) {
+			var geocoder = data[0][0], loc = geocoder.geometry.location; 
+			if (loc.lat() == '48.50793300000001' && loc.lng() == '32.26231699999994' && counter <= 2) {
+				geocoding(document.getElementById('addressNew').value);
+				counter++;
+				console.log(123);
+			}else{
+				setMarker(data[1], data[0])
+			}
+		}
+	}else{
+    	geocoding(address);
+	}
+}
 
-  function codeAddress() {
-    var address = document.getElementById('address').value;
-    geocoder.geocode( { 'address': address}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
+function geocoding(address){
+	geocoder.geocode({
+        'address': address
+    }, function(results, status) {
+        codeAddress([results, status]);
+    });
+}
+
+
+function setMarker (status, results) {
+	if (status == google.maps.GeocoderStatus.OK) {
         map.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
             map: map,
             position: results[0].geometry.location
         });
-      } else {
+    } else {
         console.log('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
+    }
+}
+
 </script>
 
 
