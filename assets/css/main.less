@@ -294,6 +294,13 @@ body, html{
 				padding-left: 75px;
 				display: inline-block;
 				position: relative;
+				span{
+					display: inline-block;
+					position: absolute;
+					font-size: 20px;
+					right: -291px;
+					top: 67px;
+				}
 				&:after{
 					content: ' ';
 					display: block;
@@ -303,7 +310,7 @@ body, html{
 					background: url(../images/logo_kirovohrad.svg) no-repeat center center;
 					height: 127px;
 					top: -40px;
-					background-size: cover;
+					background-size: contain;
 				}
 			}
 			.search_wrapper{
@@ -783,6 +790,11 @@ body, html{
 					text-align: center;
 					padding: 0;
 					margin-top: 45px;
+					span{
+						right: 0;
+						top: 143px;
+						width: 100%;
+					}
 					&:after{
 						right: 50%;
 						margin-right: -148px;

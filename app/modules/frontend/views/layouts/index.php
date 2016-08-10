@@ -61,7 +61,10 @@
 						</li>
 					</ul>
 				</div>
-				<h1 class='main-title' <?= $this->config->route['controllerId'] != 'MainController' ? 'style="margin-top: 130px;"' : false; ?>>Нові назви вулиць в місті </h1>
+				<h1 class='main-title' <?= $this->config->route['controllerId'] != 'MainController' ? 'style="margin-top: 130px;"' : false; ?>>
+					Нові назви вулиць в місті 
+					<span>Стара назва - Кiровоград</span>
+				</h1>
 				<?php if ($this->config->route['controllerId'] == 'MainController'): ?>
 					<div class="search_wrapper">
 						<input type="text" name='search' placeholder='Введіть назву'>
