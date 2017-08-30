@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css">
 		<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.js' type='text/javascript'></script>-->
 		<script type='text/javascript' src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
-		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBS2O3LkEL-F-EHJ9P-AdsalqFhOx4bqhg"></script>
 		<script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js "></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -87,6 +87,7 @@
 						<li><a href="#" >Д</a></li>
 						<li><a href="#" >Е</a></li>
 						<li><a href="#" >Ж</a></li>
+                        <li><a href="#" >З</a></li>
 						<li><a href="#" >І</a></li>
 						<li><a href="#" >К</a></li>
 						<li><a href="#" >Л</a></li>
