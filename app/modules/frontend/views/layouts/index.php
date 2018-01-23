@@ -163,8 +163,8 @@
 				</div>
 				<div class="development-by">
 					<span>Разработано в:</span>
-					<a href="https://onix-systems.com" target='__blank'>
-						<img src="https://onix-systems.com/img/static/onix-logo.svg" alt="Onix-Systems">
+					<a href="https://onix-systems.com" target='_blank'>
+						<img src="/assets/images/onix-logo.png" alt="Outsourcing Ukraine">
 					</a>
 				</div>
 			</div>
