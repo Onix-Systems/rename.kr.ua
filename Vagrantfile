@@ -49,16 +49,7 @@ end
 
   WORKDIR=/home/vagrant/rename.kr.ua/
 
-  if [ ! -e rename.kr.ua ]; then
-      git clone https://github.com/Onix-Systems/rename.kr.ua.git
-      cp /vagrant/Dockerfile  ${WORKDIR}
-      cp /vagrant/rmkr.sql  ${WORKDIR}
-      cp /vagrant/credential  ${WORKDIR}
-      cd ${WORKDIR}
-  else
-      cd ${WORKDIR}
-      git pull
-  fi
+  
 
   docker pull mysql:5.7
   docker pull php:7.0-apache
