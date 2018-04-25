@@ -7,7 +7,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
     MYSQL_USER=user \
     MYSQL_PASSWORD=123456 \
     MYSQL_DATABASE=rename \
-    CONFIG_FILE=/vagrant/config/config.php
+    CONFIG_FILE=/var/www/html/config/config.php
 
 RUN apt-get -y update && \
     apt-get install -y \

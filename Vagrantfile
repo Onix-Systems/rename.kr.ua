@@ -47,38 +47,7 @@ end
   curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
   chmod +x /usr/local/bin/docker-compose
 
-  WORKDIR=/home/vagrant/rename.kr.ua/
-
-  
-
-  docker pull mysql:5.7
-  docker pull php:7.0-apache
-  source /vagrant/credential
-
-  CMYSQL=${MYSQL_HOSTNAME}
-  CWEB=rename.kr.ua
-  CWEBIMG=${CWEB}:latest
-  for CONTAINER in ${CWEB} ${CMYSQL}; do
-      if [ ! -z "$(docker ps -q -f name=${CONTAINER})" ]; then
-          docker stop ${CONTAINER}
-          docker rm ${CONTAINER}
-      fi
-  done
-
-  if [ -z "$(docker ps -q -f name=${CMYSQL})" ]; then
-
-      docker build -t ${CWEBIMG} .
-
-      docker run --name ${CMYSQL} -v /var/lib/mysql:/var/lib/mysql \
-                 -v ${WORKDIR}/rmkr.sql:/docker-entrypoint-initdb.d/rmkr.sql:ro \
-                 --env-file ${WORKDIR}credential -e MYSQL_RANDOM_ROOT_PASSWORD=yes \
-                 --restart always \
-                 -d mysql:5.7
-
-      docker run -d --restart always --name ${CWEB} -p 80:80 \
-                 --link ${CMYSQL} --env-file ${WORKDIR}credential \
-                 ${CWEBIMG}
-  fi
+  cd /vagrant/
 
   SHELL
 
