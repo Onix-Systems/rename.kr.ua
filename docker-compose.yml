@@ -6,6 +6,8 @@ services:
   mysql:
        image: mysql:5.7
        container_name: ${MYSQL_HOSTNAME}
+       ports:
+         - "3306:3306"
        restart: always
        env_file:
          - "credential"
@@ -15,11 +17,13 @@ services:
          - MYSQL_PASSWORD=${MYSQL_PASSWORD}
          - MYSQL_DATABASE=${MYSQL_DATABASE}
          - MYSQL_RANDOM_ROOT_PASSWORD=yes
-       ports:
-         - "8989:3306"
+       volumes:
+         - "/var/lib/mysql:/var/lib/mysql"
+         - "./rmkr.sql:/docker-entrypoint-initdb.d/rmkr.sql:ro"
 
   rename.kr.ua:
        image: php:7.0-apache
+       container_name: rename.kr.ua
        build: .
        ports:
           - "80:80"
