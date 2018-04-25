@@ -13,3 +13,9 @@
 
 #ide folder
 /app/.idea
+
+.vagrant/
+*.log
+*.sql
+credential
+

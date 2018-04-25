@@ -1,0 +1,6 @@
+.vagrant/
+*.log
+Dockerfile
+.dockerignore
+.git/
+.gitignore
