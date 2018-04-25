@@ -29,6 +29,7 @@ Development environment use current folder as source for application.
 ```
     .
     ├── Dockerfile
+    ├── docker-compose.yml
     ├── credential          *
     ├── rmkr.sql            **
     └── Vagrantfile
@@ -44,4 +45,3 @@ To launch development environment use next command:
 
 After launching virtual machine demo application will be accessible by url:
 http://localhost:8080
-
