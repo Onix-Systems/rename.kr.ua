@@ -3,20 +3,24 @@ version: '3'
 source /vagrant/credential
 
 services:
-
-  ${MYSQL_HOSTNAME}:
-   image: mysql:5.7
-   volumes:
-     - db_data:/var/lib/mysql
-     restart: always
-     environment:
-       MYSQL_HOSTNAME: ${MYSQL_HOSTNAME}
-       MYSQL_USER: ${MYSQL_USER}
-       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-       MYSQL_DATABASE: ${MYSQL_DATABASE}
-       MYSQL_RANDOM_ROOT_PASSWORD: yes
+  mysql:
+       image: mysql:5.7
+       container_name: ${MYSQL_HOSTNAME}
+       restart: always
+       env_file:
+         - "credential"
+       environment:
+         - MYSQL_HOSTNAME=${MYSQL_HOSTNAME}
+         - MYSQL_USER=${MYSQL_USER}
+         - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+         - MYSQL_DATABASE=${MYSQL_DATABASE}
+         - MYSQL_RANDOM_ROOT_PASSWORD=yes
+       ports:
+         - "8989:3306"
 
   rename.kr.ua:
-    image: php:7.0-apache
-    build: .
-      restart: always
+       image: php:7.0-apache
+       build: .
+       ports:
+          - "80:80"
+       restart: always
