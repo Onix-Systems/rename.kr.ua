@@ -8,23 +8,23 @@ services:
          - "3306:3306"
        restart: always
        environment:
-         - MYSQL_USER=db-user
-         - MYSQL_PASSWORD=654321
          - MYSQL_DATABASE=rmkr
          - MYSQL_RANDOM_ROOT_PASSWORD=yes
        env_file:
-         - "credential"
+         - ./credentials.env
        volumes:
          - "./rmkr.sql:/docker-entrypoint-initdb.d/rmkr.sql:ro"
 
   web:
-       image: php:7.0-apache
        build: .
        container_name: rename.kr.ua
-       env_file:
-         - "credential"
        ports:
           - "80:80"
-       links:
-         - mysql:db
        restart: always
+       environment:
+         - MYSQL_HOSTNAME=mysql
+         - MYSQL_DATABASE=rmkr
+       env_file:
+         - ./credentials.env
+       links:
+         - mysql

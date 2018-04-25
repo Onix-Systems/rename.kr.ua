@@ -17,5 +17,4 @@
 .vagrant/
 *.log
 *.sql
-credential
-
+*.env
