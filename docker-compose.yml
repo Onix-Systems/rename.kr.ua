@@ -1,30 +1,30 @@
 version: '3'
 
-source /vagrant/credential
-
 services:
   mysql:
        image: mysql:5.7
-       container_name: ${MYSQL_HOSTNAME}
+       container_name: rename-db
        ports:
          - "3306:3306"
        restart: always
+       environment:
+         - MYSQL_USER=db-user
+         - MYSQL_PASSWORD=654321
+         - MYSQL_DATABASE=rmkr
+         - MYSQL_RANDOM_ROOT_PASSWORD=yes
        env_file:
          - "credential"
-       environment:
-         - MYSQL_HOSTNAME=${MYSQL_HOSTNAME}
-         - MYSQL_USER=${MYSQL_USER}
-         - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-         - MYSQL_DATABASE=${MYSQL_DATABASE}
-         - MYSQL_RANDOM_ROOT_PASSWORD=yes
        volumes:
-         - "/var/lib/mysql:/var/lib/mysql"
          - "./rmkr.sql:/docker-entrypoint-initdb.d/rmkr.sql:ro"
 
-  rename.kr.ua:
+  web:
        image: php:7.0-apache
-       container_name: rename.kr.ua
        build: .
+       container_name: rename.kr.ua
+       env_file:
+         - "credential"
        ports:
           - "80:80"
+       links:
+         - mysql:db
        restart: always
