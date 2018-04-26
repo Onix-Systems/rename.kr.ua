@@ -4,5 +4,7 @@ Dockerfile
 .dockerignore
 .git/
 .gitignore
-*.env
+.env
+*.example
+credentials.env
 docker-compose.yml
