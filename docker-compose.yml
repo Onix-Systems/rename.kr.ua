@@ -4,8 +4,6 @@ services:
   mysql:
        image: mysql:5.7
        container_name: rename-db
-       ports:
-         - "3306:3306"
        restart: always
        environment:
          - MYSQL_DATABASE=rmkr
@@ -24,7 +22,7 @@ services:
        build: .
        container_name: rename.kr.ua
        ports:
-          - "80:80"
+         - ${PORT1}:${PORT2}
        restart: always
        environment:
          - MYSQL_HOSTNAME=mysql

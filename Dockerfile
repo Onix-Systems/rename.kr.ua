@@ -17,7 +17,8 @@ RUN apt-get -y update && \
       wget && \
     docker-php-ext-install pdo_mysql && \
     a2enmod rewrite && \
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ \
+    --filename=composer
 
 COPY . ./
 

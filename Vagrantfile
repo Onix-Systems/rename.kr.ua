@@ -48,6 +48,8 @@ end
   chmod +x /usr/local/bin/docker-compose
 
   cd /vagrant/
+  
+  docker-compose down
   docker-compose build
   docker-compose up -d
 
