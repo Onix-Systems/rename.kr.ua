@@ -1,6 +1,7 @@
 .vagrant/
 *.log
 Dockerfile
+Vagrantfile
 .dockerignore
 .git/
 .gitignore
@@ -8,3 +9,4 @@ Dockerfile
 *.example
 credentials.env
 docker-compose.yml
+*.sql
