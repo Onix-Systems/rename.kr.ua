@@ -3,10 +3,10 @@ FROM php:7.0-apache
 LABEL maintainer="devops@onix-systems.com"
 
 ENV COMPOSER_ALLOW_SUPERUSER=1 \
-    MYSQL_HOSTNAME=localhost \
-    MYSQL_USER=user \
-    MYSQL_PASSWORD=123456 \
-    MYSQL_DATABASE=rename \
+    MYSQL_HOSTNAME=l \
+    MYSQL_USER=u \
+    MYSQL_PASSWORD=1 \
+    MYSQL_DATABASE=r \
     CONFIG_FILE=/var/www/html/config/config.php
 
 RUN apt-get -y update && \
