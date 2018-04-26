@@ -30,12 +30,12 @@ Development environment use current folder as source for application.
     .
     ├── Dockerfile
     ├── docker-compose.yml
-    ├── credential          *
+    ├── credentials.env          *
     ├── rmkr.sql            **
     └── Vagrantfile
 
 ```
-`* credential` - contains user data and is filled in as (credential.example)
+`* credentials.env` - contains user data and is filled in as (credential.example)
 
 `** table data` - supplied separately
 
