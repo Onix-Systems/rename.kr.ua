@@ -1,19 +1,18 @@
 # rename.kr.ua
 
-Сайт [rename.kr.ua](http://rename.kr.ua/) створено, щоб допомогти жителям міста знайти як саме змінилися назви вулиць, згідно с законом про декомунізаціюю
+Сайт [rename.kr.ua](http://rename.kr.ua/) створено, щоб допомогти жителям міста знайти як саме змінилися назви вулиць, згідно закону про декомунізацію
 
 Information about renamed streets in Kirovohrad, Ukraine in 2015-2016
 
 ---
 
-### Development tools for deploying a web server
+### Для розгорання веб севера необхідні деякі програми:
 
-### Requirements
 1. Oracle VirtulBox https://www.virtualbox.org
 1. Hashicorp Vagrant https://www.vagrantup.com/
 1. Git https://git-scm.com/
 
-### The resources that were used in the development:
+### Більш детально з використаними продуктими можна ознайомитись:
 
 1. https://www.vagrantup.com/ - official site Vagrant
 1. https://hub.docker.com/_/mysql/ - official repository MYSQL
@@ -21,11 +20,11 @@ Information about renamed streets in Kirovohrad, Ukraine in 2015-2016
 1. https://getcomposer.org/ - official documentations Composer for PHP
 1. https://docs.docker.com/ - official documentations for Docker
 
-# Usage
+# Інструкція з використання
 
-Development environment use current folder as source for application.
+Середовище розробки використовує поточну папку як джерело для програми.
 
-### Project structure
+### Структура файлів проекту
 ```
     .
     ├── Dockerfile
@@ -36,13 +35,15 @@ Development environment use current folder as source for application.
     └── Vagrantfile
 
 ```
-`* credentials.env` - contains user data and is filled in as (credentials.env.example)
+`* credentials.env` - містить користувацькі дані, як приклад (credentials.env.example)
 
-`** table data` - supplied separately
+`** rmkr.sql` - таблиця для експорту в базу даних, постачається окремо
 
-To launch development environment use next command:
+`***` Якщо 80 порт, у вас, зайнятий, вкажіть вільний порт через файл `.env` як приклад (.env.example).
+
+Для запуску середовища використовуйте наступну команду:
 
 `$ vagrant up`
 
-After launching virtual machine demo application will be accessible by url:
-http://localhost:8080 `***` If these ports are busy - write others in the file `.env` as (.env.example)
+Після запуску віртуальної машини сайт буде доступний за адресою:
+http://localhost:8080
