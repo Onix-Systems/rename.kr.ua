@@ -54,4 +54,4 @@ http://localhost:8080
 
 Для розгортання проекту і підключення до сервіса traefik, необхідно запускати `docker-compose.yml` разом з `docker-compose.override.yml` використовуючи `-f`:
 
-`docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d`
+`docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d`
