@@ -6,7 +6,7 @@ Information about renamed streets in Kirovohrad, Ukraine in 2015-2016
 
 ---
 
-### Для розгорання веб севера необхідні деякі програми:
+### Для розгорання веб севера локально, необхідні деякі програми:
 
 1. Oracle VirtulBox https://www.virtualbox.org
 1. Hashicorp Vagrant https://www.vagrantup.com/
@@ -29,6 +29,7 @@ Information about renamed streets in Kirovohrad, Ukraine in 2015-2016
     .
     ├── Dockerfile
     ├── docker-compose.yml
+    ├── docker-compose.override.yml
     ├── credentials.env          *
     ├── rmkr.sql            **
     ├── .env            ***
@@ -47,3 +48,9 @@ Information about renamed streets in Kirovohrad, Ukraine in 2015-2016
 
 Після запуску віртуальної машини сайт буде доступний за адресою:
 http://localhost:8080
+---
+### Розгортання проекту на хмарному сервісі, з існуючим зворотнім проксі-сервісом traefik
+
+Для розгортання проекту і підключення до сервіса traefik, необхідно запускати `docker-compose.yml` разом з `docker-compose.override.yml` використовуючи `-f`:
+
+`docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d`
