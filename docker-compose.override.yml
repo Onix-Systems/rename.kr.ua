@@ -1,7 +1,8 @@
 version: '3'
 
 services:
-  networks:
+networks:
+  mysql:
   web:
     external:
       name: traefik_webgateway
