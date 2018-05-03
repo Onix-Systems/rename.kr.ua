@@ -2,37 +2,37 @@ version: '3'
 
 services:
   mysql:
-       image: mysql:5.7
-       container_name: rename-db
-       restart: always
-       environment:
-         - MYSQL_DATABASE=rmkr
-         - MYSQL_RANDOM_ROOT_PASSWORD=yes
-       env_file:
-         - ./credentials.env
-       volumes:
-         - "./rmkr.sql:/docker-entrypoint-initdb.d/rmkr.sql:ro"
-       logging:
-        driver: "json-file"
-        options:
-          max-size: "10M"
-          max-file: "5"
+    image: mysql:5.7
+    container_name: rename-db
+    restart: always
+    environment:
+     - MYSQL_DATABASE=rmkr
+     - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    env_file:
+     - ./credentials.env
+    volumes:
+     - "./rmkr.sql:/docker-entrypoint-initdb.d/rmkr.sql:ro"
+    logging:
+    driver: "json-file"
+    options:
+      max-size: "10M"
+      max-file: "5"
 
   web:
-       build: .
-       container_name: rename.kr.ua
-       ports:
-         - "${BIND_PORT:-80}:80"
-       restart: always
-       environment:
-         - MYSQL_HOSTNAME=mysql
-         - MYSQL_DATABASE=rmkr
-       env_file:
-         - ./credentials.env
-       links:
-         - mysql
-       logging:
-        driver: "json-file"
-        options:
-          max-size: "10M"
-          max-file: "5"
+    build: .
+    container_name: rename.kr.ua
+    ports:
+     - "${BIND_PORT:-80}:80"
+    restart: always
+    environment:
+     - MYSQL_HOSTNAME=mysql
+     - MYSQL_DATABASE=rmkr
+    env_file:
+     - ./credentials.env
+    links:
+     - mysql
+    logging:
+    driver: "json-file"
+    options:
+      max-size: "10M"
+      max-file: "5"
