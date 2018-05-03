@@ -1,14 +1,13 @@
-version: '3'
+version: '2.1'
+
+networks:
+  default:
+    external:
+      name: traefik_webgateway
 
 services:
-networks:
-  mysql:
-    external:
-      name: traefik_webgateway
   web:
-    external:
-      name: traefik_webgateway
-  labels:
+    labels:
     - "traefik.enable=true"
     - "traefik.backend=rename.kr.ua"
     - "traefik.frontend.rule=Host:rename.kr.ua, www.rename.kr.ua"
