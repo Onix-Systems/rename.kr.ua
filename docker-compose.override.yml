@@ -11,5 +11,5 @@ networks:
   labels:
     - "traefik.enable=true"
     - "traefik.backend=rename.kr.ua"
-    - "traefik.frontend.rule=Host:renamekr.ua, www.renamekr.ua"
+    - "traefik.frontend.rule=Host:rename.kr.ua, www.rename.kr.ua"
     - "traefik.port=80"
