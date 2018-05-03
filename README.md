@@ -57,6 +57,9 @@ http://localhost:8080
 `docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d`
 
 Для тиестування локально, необхідний попередній запуск мережі командою:
+
 `docker network create --driver bridge traefik_webgateway`
+
 Та запуск контейнера traefic в цій мережі:
+
 `docker-compose -f docker-compose.traefik.yml -f docker-compose.yml -f docker-compose.override.yml up -d`
