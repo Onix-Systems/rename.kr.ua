@@ -52,6 +52,11 @@ http://localhost:8080
 ---
 ### Розгортання проекту на хмарному сервісі, з існуючим зворотнім проксі-сервісом traefik
 
-Для розгортання проекту і підключення до сервіса traefik, необхідно запускати `docker-compose.yml` разом з `docker-compose.override.yml` використовуючи `-f`:
+Для розгортання проекту і підключення до сервіса traefik, необхідно запускати `docker-compose.yml` разом з `docker-compose.override.yml` використовуючи `-f` та змінивши типовий порт в `.env`:
 
 `docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d`
+
+Для тиестування локально, необхідний попередній запуск мережі командою:
+`docker network create --driver bridge traefik_webgateway`
+Та запуск контейнера traefic в цій мережі:
+`docker-compose -f docker-compose.traefik.yml -f docker-compose.yml -f docker-compose.override.yml up -d`
