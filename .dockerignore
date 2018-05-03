@@ -1,0 +1,12 @@
+.vagrant/
+*.log
+Dockerfile
+Vagrantfile
+.dockerignore
+.git/
+.gitignore
+.env
+*.example
+credentials.env
+docker-compose.yml
+*.sql
