@@ -6,13 +6,13 @@ Information about renamed streets in Kirovohrad, Ukraine in 2015-2016
 
 ---
 
-### Для розгорання веб севера локально, необхідні деякі програми:
+### Для розгортання веб сервера локально, необхідні деякі програми:
 
 1. Oracle VirtulBox https://www.virtualbox.org
 1. Hashicorp Vagrant https://www.vagrantup.com/
 1. Git https://git-scm.com/
 
-### Більш детально з використаними продуктими можна ознайомитись:
+### Більш детально з використаними продуктами можна ознайомитись:
 
 1. https://www.vagrantup.com/ - official site Vagrant
 1. https://hub.docker.com/_/mysql/ - official repository MYSQL
@@ -50,8 +50,8 @@ Information about renamed streets in Kirovohrad, Ukraine in 2015-2016
 http://localhost:8080
 
 ---
-### Розгортання проекту на хмарному сервісі, з існуючим зворотнім проксі-сервісом traefik
+### Розгортання проекту на хмарному сервісі, з існуючим реверс проксі-сервісом traefik
 
-Для розгортання проекту і підключення до сервіса traefik, необхідно запускати `docker-compose.yml` разом з `docker-compose.override.yml` використовуючи `-f` та змінивши типовий порт в `.env`:
+Для розгортання проекту і підключення до сервісу traefik, необхідно запустити `docker-compose.yml` разом з `docker-compose.override.yml` використовуючи `-f` та змінивши типовий порт в `.env`:
 
 `docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d`
