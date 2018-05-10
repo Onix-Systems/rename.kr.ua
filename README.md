@@ -42,8 +42,8 @@ Information about renamed streets in Kirovohrad, Ukraine in 2015-2016
 
 `***` Якщо 80 порт, у вас, зайнятий, вкажіть вільний порт через файл `.env` як приклад (.env.example),та розкоментуйте відповідні рядки в `docker-compose.yml`.
 
-`#   ports:
- #    - "${BIND_PORT:-80}:80"`
+`#   ports:`
+`#    - "${BIND_PORT:-80}:80"`
 
 Для запуску середовища використовуйте наступну команду:
 
