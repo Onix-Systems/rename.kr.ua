@@ -13,8 +13,8 @@ services:
     volumes:
      - "./rmkr.sql:/docker-entrypoint-initdb.d/rmkr.sql:ro"
     logging:
-    driver: "json-file"
-    options:
+     driver: "json-file"
+     options:
       max-size: "10M"
       max-file: "5"
 
@@ -32,7 +32,7 @@ services:
     links:
      - mysql
     logging:
-    driver: "json-file"
-    options:
+     driver: "json-file"
+     options:
       max-size: "10M"
       max-file: "5"
