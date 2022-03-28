@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "48e97a9ca43ef29513dbd40b3ab99725",
     "content-hash": "fdd8e981fcc6599b7f0aa760d6888168",
     "packages": [
         {
@@ -60,7 +59,7 @@
                 "sql",
                 "sqlite"
             ],
-            "time": "2015-02-11 03:54:23"
+            "time": "2015-02-11T03:54:23+00:00"
         },
         {
             "name": "simplelight/framework",
@@ -68,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/canabina/SimplelightCore.git",
-                "reference": "e955c207e89d031f10f4eb436d928bb1d0ad8432"
+                "reference": "3cb7ea6a8fca92cd49e5791f5bb8a0898fcbc459"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canabina/SimplelightCore/zipball/e955c207e89d031f10f4eb436d928bb1d0ad8432",
-                "reference": "e955c207e89d031f10f4eb436d928bb1d0ad8432",
+                "url": "https://api.github.com/repos/canabina/SimplelightCore/zipball/3cb7ea6a8fca92cd49e5791f5bb8a0898fcbc459",
+                "reference": "3cb7ea6a8fca92cd49e5791f5bb8a0898fcbc459",
                 "shasum": ""
             },
             "require": {
@@ -87,24 +86,28 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Small framework",
-            "time": "2016-03-05 15:55:47"
+            "time": "2016-05-06T08:42:30+00:00"
         },
         {
             "name": "smarty/smarty",
-            "version": "v3.1.29",
+            "version": "v3.1.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smarty-php/smarty.git",
-                "reference": "35480f10e7ce9b0fdaf23d3799d7b79463919b1e"
+                "reference": "273f7e00fec034f6d61112552e9caf08d19565b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/35480f10e7ce9b0fdaf23d3799d7b79463919b1e",
-                "reference": "35480f10e7ce9b0fdaf23d3799d7b79463919b1e",
+                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/273f7e00fec034f6d61112552e9caf08d19565b7",
+                "reference": "273f7e00fec034f6d61112552e9caf08d19565b7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5 || ^6.5 || ^5.7 || ^4.8",
+                "smarty/smarty-lexer": "^3.1"
             },
             "type": "library",
             "extra": {
@@ -114,9 +117,7 @@
             },
             "autoload": {
                 "classmap": [
-                    "libs/Smarty.class.php",
-                    "libs/SmartyBC.class.php",
-                    "libs/sysplugins/"
+                    "libs/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -142,7 +143,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-12-21 01:57:06"
+            "time": "2022-01-10T09:52:40+00:00"
         },
         {
             "name": "twig/twig",
@@ -203,7 +204,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-01-25 21:22:18"
+            "time": "2016-01-25T21:22:18+00:00"
         }
     ],
     "packages-dev": [],
@@ -215,5 +216,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

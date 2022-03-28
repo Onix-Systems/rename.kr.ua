@@ -21,8 +21,8 @@ services:
   web:
     build: .
     container_name: rename.kr.ua
- #   ports:
- #    - "${BIND_PORT:-80}:80"
+    ports:
+     - "${BIND_PORT:-80}:80"
     restart: always
     environment:
      - MYSQL_HOSTNAME=mysql
