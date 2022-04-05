@@ -12,7 +12,7 @@
 
 	require ( __DIR__ . '/vendor/autoload.php' );
 
-	require ( __DIR__.'/vendor/simplelight/framework/framework.php' );
+	require ( __DIR__.'/vendor/onix-systems/framework/framework.php' );
 
 	new Sili;
 
