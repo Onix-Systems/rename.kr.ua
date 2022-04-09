@@ -2,7 +2,7 @@
     "require": {
         "smarty/smarty": "~3.1",
         "onix-systems/framework": "~1.5",
-        "catfan/medoo": "0.9.8",
+        "catfan/medoo": "1.7.5",
         "twig/twig": "~1.0"
     }
 }
