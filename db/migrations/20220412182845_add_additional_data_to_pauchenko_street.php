@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class AddAdditionalDataToPachenkoStreet extends AbstractMigration
+class AddAdditionalDataToPauchenkoStreet extends AbstractMigration
 {
     /**
      * Change Method.
