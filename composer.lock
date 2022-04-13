@@ -450,16 +450,16 @@
         },
         {
             "name": "onix-systems/framework",
-            "version": "v1.5.1",
+            "version": "v1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Onix-Systems/SimplelightCore.git",
-                "reference": "d02ac8752513419e5d9c29e8247445b47446b50b"
+                "reference": "802660b25447513060199751edb6b1df85191df0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Onix-Systems/SimplelightCore/zipball/d02ac8752513419e5d9c29e8247445b47446b50b",
-                "reference": "d02ac8752513419e5d9c29e8247445b47446b50b",
+                "url": "https://api.github.com/repos/Onix-Systems/SimplelightCore/zipball/802660b25447513060199751edb6b1df85191df0",
+                "reference": "802660b25447513060199751edb6b1df85191df0",
                 "shasum": ""
             },
             "require": {
@@ -475,9 +475,9 @@
             "description": "Small framework",
             "support": {
                 "issues": "https://github.com/Onix-Systems/SimplelightCore/issues",
-                "source": "https://github.com/Onix-Systems/SimplelightCore/tree/v1.5.1"
+                "source": "https://github.com/Onix-Systems/SimplelightCore/tree/v1.5.3"
             },
-            "time": "2022-04-05T08:56:07+00:00"
+            "time": "2022-04-13T09:55:54+00:00"
         },
         {
             "name": "psr/log",
