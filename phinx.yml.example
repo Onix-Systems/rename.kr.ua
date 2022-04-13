@@ -8,9 +8,9 @@ environments:
   development:
     adapter: mysql
     host: mysql
-    name: rmkr
-    user: user
-    pass: '123456'
+    name:
+    user:
+    pass: ''
     port: 3306
     charset: utf8
 
