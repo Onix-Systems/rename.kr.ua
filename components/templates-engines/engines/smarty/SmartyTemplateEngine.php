@@ -19,7 +19,7 @@ class SmartyTemplateEngine implements TemplateEngineInterface
 
 		$this->config = $config;
 
-		if (class_exists('Smarty')) 
+		if (class_exists(Smarty::class))
 			$this->design = new Smarty;
 		else
 			throw new Exception("Smarty is not defined", 1);

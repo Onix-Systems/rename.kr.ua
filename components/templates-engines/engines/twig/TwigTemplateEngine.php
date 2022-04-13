@@ -18,7 +18,7 @@ class TwigTemplateEngine implements TemplateEngineInterface{
 		
 		$this->config = $config;
 
-		if ( class_exists('Twig_Loader_Filesystem') && class_exists('Twig_Environment') ) {
+		if ( class_exists(Twig_Loader_Filesystem::class) && class_exists(Twig_Environment::class) ) {
 
 			$loader = new Twig_Loader_Filesystem([$this->config->viewsPath, $this->config->viewsPath.'/layouts']);
 
