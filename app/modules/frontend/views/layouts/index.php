@@ -17,15 +17,15 @@
 		<script type='text/javascript' src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBS2O3LkEL-F-EHJ9P-AdsalqFhOx4bqhg"></script>
 		<script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js "></script>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1245735-40"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
 
-			ga('create', 'UA-1245735-40', 'auto');
-			ga('send', 'pageview');
-		</script>
+            gtag('js', new Date());
+            gtag('config', 'UA-1245735-40');
+        </script>
 		
 	</head>
 	<body>
