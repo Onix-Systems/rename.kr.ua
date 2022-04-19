@@ -57,7 +57,7 @@
 							<a href="/docs">Розробникам</a>
 						</li>
 						<li>
-							<a href="#" onclick="FreshWidget.show(); return false;">Зворотній звязок</a>
+							<a href="https://github.com/Onix-Systems/rename.kr.ua/issues/new">Зворотній звязок</a>
 						</li>
 					</ul>
 				</div>
